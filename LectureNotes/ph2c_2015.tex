@@ -1,0 +1,58 @@
+\documentclass[english, 11pt]{article}
+\usepackage{notes}
+
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{braket}
+\usepackage{mathtools}
+\usepackage{epigraph}
+
+% Uncomment these for a different family of fonts
+% \usepackage{cmbright}
+% \renewcommand{\sfdefault}{cmss}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\thiscoursecode}{ph2c}
+\newcommand{\thiscoursename}{Intro. to Statistical Physics and Thermodynamics}
+\newcommand{\thisprof}{Prof. Rana X Adhikari}
+\newcommand{\me}{}
+\newcommand{\thisterm}{(Spring) 2015}
+\newcommand{\website}{https://piazza.com/caltech/spring2015/ph2c/home}
+
+% Headers
+\chead{\thiscoursename}
+\lhead{\thisterm}
+
+
+%%%%%% TITLE %%%%%%
+\newcommand{\notefront} {
+\pagenumbering{roman}
+\begin{center}
+
+{\ttfamily \url{\website}} {\small}
+
+\textbf{\Huge{\noun{\thiscoursecode}}}{\Huge \par}
+
+{\large{\noun{\thiscoursename}}}\\ \vspace{0.1in}
+
+  {\noun \thisprof} \ $\bullet$ \ {\noun \thisterm} \ $\bullet$ \ {\noun {Caltech}} \\
+
+  \end{center}
+  }
+
+% Begin Document
+\begin{document}
+
+  % Notes front
+  \notefront
+  % Table of Contents and List of Figures
+  \tocandfigures
+  % Abstract
+  \doabstract{These notes are intended as a resource for myself; past, present, or future students of this course, and anyone interested in the material. The goal is to provide an end-to-end resource that covers all material discussed in the course displayed in an organized manner. If you spot any errors or would like to contribute, please contact me directly.}
+
+\clearpage
+\input{ThermalEquilibrium}
+
+\clearpage
+\input{EntropyTemperature}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \end{document}

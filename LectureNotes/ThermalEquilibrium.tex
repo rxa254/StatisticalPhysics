@@ -1,0 +1,67 @@
+\section{Thermal Equilibrium: April 7}
+
+\subsection{Review of Last Week}
+\begin{itemize}
+\item \textbf{Fundamental Assumption of Statistical Mechanics:} "An isolated system in uqilibrium is equally likely to be found in any of the microstates available to it."
+
+\item $g =$ "the multiplicity"; the number of accessible micro states for a given set of extensive parameters (e.g. U, N, V)
+
+\item If all such states are equally likely, then \textit{the probability distribution is uniform}: $P_i = 1/g$
+
+\item The mean value or "Expectation value" of an observable \mathcal{A} is defined 
+  $\Braket{\mathcal{A}} = \displaystyle \sum_{i} \mathcal{A}_i P(i)$
+
+\item Fluctuations are \textit{\textbf{tiny}}: For N >> 1, quantities like $\Delta U/U$ go as $1/\sqrt{N}$
+
+\item This is a consequence of the Central Limit Theorem. Ensembles of many varying distributions sum up to a Gaussian distribution.
+
+\end{itemize}
+
+\subsubsection{Collection of N magnetic spins}
+\begin{equation}
+g(N,s) = \frac{N!}{(N/2 + s)! (N/2-s)!}
+\end{equation}
+Using Stirling's Approximation (cf. \url{http://mathworld.wolfram.com/StirlingsApproximation.html}):
+\begin{equation}
+log(N!) = N log(N) - N + \frac{1}{2}log(2 \pi N)
+\end{equation}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{Figures/Stirling.pdf}
+\caption{Comparison of various approximations to N!}
+\end{figure}
+after some substitutions, we find that
+
+\begin{equation}
+g(N,s) = 2^N \sqrt{\frac{2}{\pi N}} exp\bigg[-\frac{1}{2}\bigg(\frac{s}{\sigma_s}\bigg)^2\bigg]
+\end{equation}
+where $\sigma_s = \sqrt{N}/2$ is the standard deviation of the Gaussian probability distribution of $s$, the spin excess.
+
+\subsection{Thermal Equilibrium for Two Systems}
+Let us consider two non-interacting systems. Each system is a box with a collections of
+spins. Box 1 has $N_1$ total atoms and an initial spin excess of $s_1$.
+The combined multiplicity of these 
+two systems (before we allow them to interact) is (using the same logic that we used to consider
+our binary model of coin flips) just the product of the individual multiplicities:
+\begin{align}
+g_{tot} &= g_1 \times g_2 \\
+        &= \frac{2}{\pi} \frac{1}{\sqrt{N_1 N_2}} 2^{N_1 + N_2} exp\bigg[-2\bigg(\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}\bigg)\bigg]
+\label{eq:ginit}
+\end{align}
+Rather than consider some artificial magnetic spin exchange interaction, let us instead
+turn on an external magnetic field, such that the energy of each system becomes
+$U_i = -2 m B s_i$, where $m$ is the magnetic moment of each atom and $B$ is the magnetic
+field. We then bring the boxes into contact, such that it is possible to interchange energy
+between the two system. The total spin and the total energy will remain conserved
+(e.g. $U = U_1 + U_2$). For this two system example, we do not let the number of atoms in
+each box change: $N_1 = const, N_2 = const$.
+
+After the energy exchange begins, the two systems move from their 
+initial state (Eq.~\ref{eq:ginit}) into a new state
+\begin{equation}
+g_{tot} = g1(U_1^\prime) \times g2(U_2^\prime)
+\end{equation}
+with more accessible microstates.
+
+
+
