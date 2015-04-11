@@ -1,4 +1,4 @@
-\section{Thermal Equilibrium: April 7}
+\section{Equilibrium: April 7}
 
 \subsection{Review of Last Week}
 \begin{itemize}
@@ -35,7 +35,8 @@ after some substitutions, we find that
 \begin{equation}
 g(N,s) = 2^N \sqrt{\frac{2}{\pi N}} exp\bigg[-\frac{1}{2}\bigg(\frac{s}{\sigma_s}\bigg)^2\bigg]
 \end{equation}
-where $\sigma_s = \sqrt{N}/2$ is the standard deviation of the Gaussian probability distribution of $s$, the spin excess.
+where $\sigma_s = \sqrt{N}/2$ is the standard deviation of the Gaussian probability 
+distribution of $s$, the spin excess.
 
 \subsection{Thermal Equilibrium for Two Systems}
 Let us consider two non-interacting systems. Each system is a box with a collections of
@@ -45,7 +46,8 @@ two systems (before we allow them to interact) is (using the same logic that we 
 our binary model of coin flips) just the product of the individual multiplicities:
 \begin{align}
 g_{tot} &= g_1 \times g_2 \\
-        &= \frac{2}{\pi} \frac{1}{\sqrt{N_1 N_2}} 2^{N_1 + N_2} exp\bigg[-2\bigg(\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}\bigg)\bigg]
+        &= \frac{2}{\pi} \frac{1}{\sqrt{N_1 N_2}} 2^{N_1 + N_2} exp\bigg[-2\bigg(\frac{s_1^2}{N_1} + 
+        \frac{s_2^2}{N_2}\bigg)\bigg]
 \label{eq:ginit}
 \end{align}
 Rather than consider some artificial magnetic spin exchange interaction, let us instead
@@ -63,5 +65,17 @@ g_{tot} = g1(U_1^\prime) \times g2(U_2^\prime)
 \end{equation}
 with more accessible microstates.
 
+We would like to find what the new equilibrium state is. In other words, what is the most probable
+state after the two systems have been in contact long enough to come into equilibrium.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{Figures/TwoSystemMultiplicity.pdf}
+\caption{The multiplicity functions for two systems before (Blue and Red) and after (Purple) being put 
+	into thermal contact.}
+\end{figure}
 
-
+\begin{equation}
+\bigg(\frac{\partial log(g_1)}{\partial U_1}\bigg)_{N_1} = 
+\bigg(\frac{\partial log(g_2)}{\partial U_2}\bigg)_{N_2}
+\label{eq:maxmicro}
+\end{equation}
