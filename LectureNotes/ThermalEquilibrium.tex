@@ -61,12 +61,13 @@ each box change: $N_1 = const, N_2 = const$.
 After the energy exchange begins, the two systems move from their 
 initial state (Eq.~\ref{eq:ginit}) into a new state
 \begin{equation}
-g_{tot} = g1(U_1^\prime) \times g2(U_2^\prime)
+g_{tot} = g_1(U_1^\prime) \times g_2(U_2^\prime)
 \end{equation}
 with more accessible microstates.
 
-We would like to find what the new equilibrium state is. In other words, what is the most probable
-state after the two systems have been in contact long enough to come into equilibrium?
+We would like to find what the new equilibrium state is. In other words, 
+what is the most probable state after the two (sub)systems have been in contact 
+long enough to come into equilibrium?
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{Figures/TwoSystemMultiplicity.pdf}
@@ -74,7 +75,7 @@ state after the two systems have been in contact long enough to come into equili
 	into thermal contact.}
 \end{figure}
 
-To find this, we would like to find the stationary point for the combined multiplicity function.
+To find this, we would like to find the stationary point for the combined multiplicity function. To do this we set the $dg/dU = 0$:
 
 \begin{equation}
 dg = \bigg(\frac{\partial g_1}{\partial U_1}\bigg)_{N_1} g_2~dU_1 +
@@ -82,8 +83,13 @@ dg = \bigg(\frac{\partial g_1}{\partial U_1}\bigg)_{N_1} g_2~dU_1 +
 \label{eq:maxg}
 \end{equation}
 
+Since energy is conserved, any energy gained by one sub-system is equal
+to the amount lost by the other: $dU_1 = -dU_2$. Dividing through by
+$g_1 g_2$, we find the condition for thermal equilibrium:
+
 \begin{equation}
 \bigg(\frac{\partial log(g_1)}{\partial U_1}\bigg)_{N_1} = 
 \bigg(\frac{\partial log(g_2)}{\partial U_2}\bigg)_{N_2}
 \label{eq:maxmicro}
 \end{equation}
+

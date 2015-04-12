@@ -1,16 +1,47 @@
-\documentclass[english, 11pt]{article}
+\documentclass[english, 11pt, letter]{article}
+
 \usepackage{notes}
 
 
-%\usepackage{mathtools}
-\usepackage{epigraph}
 
-%\usepackage[colorlinks=true]{hyperref}
+% Supercedes the hypersetup inside of notes.sty
+\hypersetup{
+colorlinks=true,
+citecolor=green,
+filecolor=blue,
+linkcolor=DarkOrchid,
+urlcolor=blue
+}
+
+% Supercedes the line in notes.sty
+\captionsetup{labelfont=bf, format=hang, labelfont={sc,bf}, textfont=small}
+
+\usepackage{epigraph}
 \usepackage{braket}
 % Uncomment these for a different family of fonts
-% \usepackage{cmbright}
-% \renewcommand{\sfdefault}{cmss}
-% \renewcommand{\familydefault}{\sfdefault}
+%\usepackage{cmbright}
+%\renewcommand{\sfdefault}{cmss}
+%\renewcommand{\familydefault}{\sfdefault}
+
+%% Choose one of the following (if not choosing the default, 
+%% viz., Computer Modern, font family):
+ %\usepackage{lmodern}
+%\usepackage[sc,osf]{mathpazo}
+%\usepackage{kpfonts}
+ %\usepackage{mathptmx}
+ %\usepackage{times,mtpro2}
+%\usepackage{stix}
+ %\usepackage{txfonts}
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{libertine} \usepackage[libertine]{newtxmath}
+
+% Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+\renewcommand{\rmdefault}{ppl} % rm
+\linespread{1.05}        % Palatino needs more leading
+\usepackage[scaled]{helvet} % ss
+\usepackage{courier} % tt
+\usepackage[euler-digits]{eulervm}
+
 
 \newcommand{\thiscoursecode}{ph2c}
 \newcommand{\thiscoursename}{Statistical Physics}
