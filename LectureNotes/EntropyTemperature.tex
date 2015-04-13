@@ -57,7 +57,7 @@ it like so:
 \subsection{The Laws of Thermodynamics}
 
 \subsubsection{The 0$^{\rm th}$ Law: Thermometers}
-\url{http://en.wikipedia.org/wiki/Zeroth_law_of_thermodynamics}
+\href{http://en.wikipedia.org/wiki/Zeroth_law_of_thermodynamics}{Wikipedia:Zeroth Law}
 
 From our definitions of temperature and thermal equilibrium 
 (cf. \cref{eq:Temp,eq:Teq}), 
@@ -74,11 +74,42 @@ of being a so-called "Law of Thermodynamics"?
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\columnwidth]{Figures/Carnot_heat_engine_2.pdf}
-\caption{Schematic diagram of Carnot's Heat Engine. \\
+\caption{Schematic diagram of Carnot's Heat Engine \\
 	\url{http://commons.wikimedia.org/wiki/File:Carnot_heat_engine_2.svg}}
 \end{figure}
+A concise statement of the 1$^{\rm st}$ Law is:
+\begin{equation}
+\Delta U = Q + W
+\label{eq:FirstLaw}
+\end{equation}
+where $\Delta U$ is the total internal energy of our system, $W$ is the
+mechanical work done \emph{to the system}\footnote{note the sign convention
+here; the work is done to the system and not by the system}, and $Q$ is
+the \textit{heat}. But what is heat? We all know what it is intuitively,
+but it is important to define it such that it can be used consistently in
+our studies of statistical mechanics. As defined in Ch.~8 of the textbook,
+heat is the energy transfer between two systems which are in thermal contact.
+It does not include work or any transfer of material. In the Carnot example
+above, $W = Q_H - Q_C$. Systems where $W > Q_H - Q_C$ are called
+perpetual motion machines of the first kind, and are known to be
+impossible to conservation of energy.
 
 \subsubsection{The 2$^{\rm nd}$ Law: Everything Runs Down}
+As we saw above in Sec.~\ref{s:Entropy}, when a system begins in a
+non-equilibrium state (such as the one where we first bring the two
+sub-systems into contact), it always moves in the direction which
+increases the entropy:\footnote{This is put to music in the song "Unsustainable", from the rock band Muse's album "The 2nd Law". Some Gaussian distributions and combinatorics are displayed for affect in their music video:
+\href{https://www.youtube.com/watch?v=EF_xdvn52As}{YouTube:Unsustainable}} pieces of a broken wine glass "never" reassemble
+into a whole glass. When we run the film backwards, we see this happen,
+but it seems that there is a preferred to direction to the 
+flow of time. This is often referred to as the 
+Arrow of TIme~\footnote{\href{http://www.wired.com/2014/04/quantum-theory-flow-time/}{2004 Wired article} on how quantum correlations may be the underlying basis for the arrow of time}
+
+For the heat engine example above, $\Delta \sigma = Q_C/\tau_C - Q_H/\tau_H$.
+In order for $\Delta \sigma$ to be positive, we must have $\tau_H > \tau_C$,
+since $Q_H \ge Q_C$.
+
+
 
 \epigraph{The law that entropy always increases, holds, I think, the supreme position among the laws of Nature. If someone points out to you that your pet theory of the universe is in disagreement with Maxwell's equations --- then so much the worse for Maxwell's equations. If it is found to be contradicted by observation --- well, these experimentalists do bungle things sometimes. But if your theory is found to be against the second law of thermodynamics I can give you no hope; there is nothing for it but to collapse in deepest humiliation.}
 {\textit{Sir Arthur S. Eddington, 1928}}
