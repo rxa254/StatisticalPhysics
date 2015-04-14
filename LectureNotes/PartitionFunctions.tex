@@ -7,11 +7,39 @@ of finding a system in a state $s$ of energy $\epsilon_s$. We already
 know how to do this for closed systems, but most systems are, in reality, open systems -- that is, they are in contact with a large thermal bath or reservoir. This might be the rest of the room (in the case of a tiny experiment) or the rest of the city (in the case that the system is a building) or even the rest of the universe (in astrophysical or cosmological cases). \\
 
 So lets take our little system $\mathcal{S}$ and put in contact with our large reservoir $\mathcal{R}$ with initial energy $U_0$ and temperature $\tau_R$. Now we put our system in thermal (and later, mechanical) contact with the reservoir such that the new energy of the reservoir is $U_0 - \epsilon_s$. Now 
-$\mathcal{R}$ can be in any of its $g_R(U_0 - \epsilon_s)$ microstates, just as we saw in last week's \textit{microcanonical} picture.
+$\mathcal{R}$ can be in any of its $g_R(U_0 - \epsilon_s)$ microstates, just as we saw in last week's \textit{microcanonical} picture. \\
 
-For a given state $s$, there is no degeneracy; the multiplicity, $g_s = 1$. So the probability of finding the total system ($\mathcal{S} + \mathcal{R}$) in the state where $\mathcal{S}$ has energy $\epsilon_s$, is just dependent on the multiplicity $g_R$: $P(s) \propto g_R(U_0 - \epsilon_s)$.
+For a given state $s$, there is no degeneracy; the multiplicity, $g_s = 1$. So the probability of finding the total system ($\mathcal{S} + \mathcal{R}$) in the state where $\mathcal{S}$ has energy $\epsilon_s$, is just dependent on the multiplicity $g_R$: $P(s) \propto g_R(U_0 - \epsilon_s)$. Since 
+$U_0 \gg \epsilon_s$, we can use the Taylor expansion to find a simplified form:
+
+\begin{equation}
+\log g_R = \sigma_R(U_0 - \epsilon_s) \simeq 
+	\sigma_R(U_0) - 
+	\epsilon_s \bigg(\frac{\partial \sigma_R}{\partial U_R}\bigg) +
+	\mathcal{O}(\epsilon_s^2)
+\end{equation}
+
+Since $(\partial \sigma_R/\partial U_R) = 1/\tau_R$, we can rewrite the proportionality for the probability as:
+
+\begin{equation}
+P(s) \propto exp(-\epsilon_s/\tau_R)
+\end{equation}
+
+This is \textbf{one the most practically useful results in statistical physics}: it allows us to compute the relative probability of the system being in different energy states. This expression, $exp(-\epsilon_s/\tau_R)$, is called the
+\emph{Boltzmann Factor}.
+
 
 \subsection{Partition Function}
+We would like to normalize the probability so that 
+$\sum_s P(s) = 1$. To do this, we just sum over all possible energy states.
+
+\begin{equation}
+P(s) = \frac{exp(-\epsilon_s/\tau_R)}{\sum_s exp(-\epsilon_s/\tau_R} = 1
+\end{equation}
+and where we will define the \emph{Partition Function}\footnote{an oddly named function for sure} as
+\begin{equation}
+Z(\tau_R) \equiv \sum_s exp(-\epsilon_s/\tau_R
+\end{equation}
 
 \subsection{Pressure}
 
