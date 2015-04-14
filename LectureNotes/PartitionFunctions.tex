@@ -38,8 +38,17 @@ P(s) = \frac{exp(-\epsilon_s/\tau_R)}{\sum_s exp(-\epsilon_s/\tau_R} = 1
 \end{equation}
 and where we will define the \emph{Partition Function}\footnote{an oddly named function for sure} as
 \begin{equation}
-Z(\tau_R) \equiv \sum_s exp(-\epsilon_s/\tau_R
+Z(\tau_R) \equiv \sum_s exp(-\epsilon_s/\tau_R)
 \end{equation}
+
+There are many thermodynamic quantities which are easier to calculate using the partition function then going directly from the entropy or multiplicity alone. As an example, lets take a look at the average energy:
+
+\begin{align}
+U = \Braket{\epsilon_s} &= \sum_s \frac{exp(-\epsilon_s/\tau_R)}{Z(\tau_R)} \\
+	&= \tau_R^2 \bigg(\frac{\partial \log Z}{\partial \tau}\bigg) 
+\end{align}
+
+which is a sensible way to go as long as the partition function itself is easier to compute than $g(\epsilon_s)$. In fact, this is true for a large number of cases.
 
 \subsection{Pressure}
 
@@ -71,6 +80,10 @@ Z(\tau_R) \equiv \sum_s exp(-\epsilon_s/\tau_R
 	the system now in thermal equilibrium with a heat bath. Consequently,
 	the temperature is now fixed, but the energy of the system is not.
 
+\item Adiabatic vs. Isentropic vs. Isothermal: Isentropic and 
+	Isothermal are clearly defined ($d\sigma = 0$ or $d\tau = 0$). But
+	adiabatic has confusing and contradictory definitions in quantum
+	mechanics and thermodynamics...
 \end{itemize}
 
 
