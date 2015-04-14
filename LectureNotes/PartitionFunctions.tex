@@ -1,1 +1,50 @@
-\section{Partition Functions: April 14}
+\section{Boltzmann Factor: April 14}
+
+
+\subsection{The Boltzmann Factor}
+An important problem in Statistical Physics, is to find the probability
+of finding a system in a state $s$ of energy $\epsilon_s$. We already
+know how to do this for closed systems, but most systems are, in reality, open systems -- that is, they are in contact with a large thermal bath or reservoir. This might be the rest of the room (in the case of a tiny experiment) or the rest of the city (in the case that the system is a building) or even the rest of the universe (in astrophysical or cosmological cases). \\
+
+So lets take our little system $\mathcal{S}$ and put in contact with our large reservoir $\mathcal{R}$ with initial energy $U_0$ and temperature $\tau_R$. Now we put our system in thermal (and later, mechanical) contact with the reservoir such that the new energy of the reservoir is $U_0 - \epsilon_s$. Now 
+$\mathcal{R}$ can be in any of its $g_R(U_0 - \epsilon_s)$ microstates, just as we saw in last week's \textit{microcanonical} picture.
+
+For a given state $s$, there is no degeneracy; the multiplicity, $g_s = 1$. So the probability of finding the total system ($\mathcal{S} + \mathcal{R}$) in the state where $\mathcal{S}$ has energy $\epsilon_s$, is just dependent on the multiplicity $g_R$: $P(s) \propto g_R(U_0 - \epsilon_s)$.
+
+\subsection{Partition Function}
+
+\subsection{Pressure}
+
+\subsection{Free Energy}
+
+
+\textbf{Summary}
+
+\begin{itemize}
+\item The probability of finding a system (in microstate $s$ with
+	energy $\epsilon_s$, in thermal equilibrium with a reservoir 
+	at temperature $\tau_R$) is proportional to the 
+	\emph{Boltzmann factor} $P(s) \propto exp(-\epsilon_s/\tau_R)$.
+
+\item To normalize $P(s)$ properly ($\sum_{s} P(s) = 1$), we divide
+	the Boltzmann factor by the sum over all energy states.
+	$P(s) = exp(-\epsilon_s/\tau_R)/Z$, where 
+	$Z(\tau_R) \equiv \sum_{s} exp(-\epsilon_s/\tau_R)$. $Z$ is called the
+	partition function.
+
+\item For a compressible system, if we change the volume slowly and by
+	a small amount, the entropy won't change (\textit{isentropic}). This
+	is defined as \textit{pressure}: $p = -(\partial U/\partial V)_\sigma$
+
+\item The picture of closed system with an accessible number of microstates
+	and associated entropy is the \emph{microcanonical ensemble}. In this picture, the energy, volume, and number of the system is fixed.
+
+\item The \emph{canonical ensemble} is the similar picture, but with 
+	the system now in thermal equilibrium with a heat bath. Consequently,
+	the temperature is now fixed, but the energy of the system is not.
+
+\end{itemize}
+
+
+
+
