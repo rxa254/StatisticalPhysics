@@ -7,9 +7,11 @@ Lecture notes, assignments, codes, etc. associated with ph2c
 * http://en.wikipedia.org/wiki/Book:Thermodynamics
 * http://en.wikipedia.org/wiki/Statistical_mechanics
 ***
+
 ### Textbooks:
 * http://books.google.com/books/about/Thermal_Physics.html?id=c0R79nyOoNMC
-* 
+
+
 ***
 Useful GIT Guides:
 * http://rogerdudler.github.io/git-guide/
