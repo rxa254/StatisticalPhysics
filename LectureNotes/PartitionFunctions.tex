@@ -34,28 +34,41 @@ We would like to normalize the probability so that
 $\sum_s P(s) = 1$. To do this, we just sum over all possible energy states.
 
 \begin{equation}
-P(s) = \frac{exp(-\epsilon_s/\tau_R)}{\sum_s exp(-\epsilon_s/\tau_R} = 1
+P(s) = \frac{exp(-\epsilon_s/\tau_R)}{\sum_s exp(-\epsilon_s/\tau_R)} = 1
 \end{equation}
 and where we will define the \emph{Partition Function}\footnote{an oddly named function for sure} as
 \begin{equation}
 Z(\tau_R) \equiv \sum_s exp(-\epsilon_s/\tau_R)
 \end{equation}
 
-There are many thermodynamic quantities which are easier to calculate using the partition function then going directly from the entropy or multiplicity alone. As an example, lets take a look at the average energy:
+There are many thermodynamic quantities which are easier to calculate using the partition function then going directly from the entropy or multiplicity alone. As an example, lets take a look at the average energy~\footnote{the last step is easier
+to verify going backwards than forwards -- check it by doing the derivative}:
 
 \begin{align}
-U = \Braket{\epsilon_s} &= \sum_s \frac{exp(-\epsilon_s/\tau_R)}{Z(\tau_R)} \\
+U = \Braket{\epsilon_s} &= 
+\frac{\sum_s \epsilon_s exp(-\epsilon_s/\tau_R)}{Z(\tau_R)} \\
 	&= \tau_R^2 \bigg(\frac{\partial \log Z}{\partial \tau}\bigg) 
 \end{align}
 
 which is a sensible way to go as long as the partition function itself is easier to compute than $g(\epsilon_s)$. In fact, this is true for a large number of cases.
 
 \subsection{Pressure}
+What is pressure? From our own experience we know that its simply related to the force exerted on the walls of a container by the system that it contains. Consider a system (like a gas) inside of a box where one of the walls is able to move (i.e. a piston). What happens if we slowly extert a force on that piston? We know that the gas will be compressed. What will be the energy delivered to the box? 
+Recall (cf.~\ref{s:FirstLaw}) the discussion on the First Law of 
+Thermodynamics: $\Delta U = Q + W$. In the case that we do not allow heat to flow through the walls of the box, the change in energy will just be the work done on the system.
+\begin{align}
+dW &= F dx \\
+   &= p (A dx) = p dV
+\end{align}
+here we have used the fact that pressure is defined as a force per unit area.
+So we have that the change in energy, for a small change in volume is just
+$dU = p dV$. If we make this change small enough and slowly enough, the change will be isentropic.
+
 
 \subsection{Free Energy}
 
 
-\textbf{Summary}
+\subsection{Summary}
 
 \begin{itemize}
 \item The probability of finding a system (in microstate $s$ with
