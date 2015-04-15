@@ -1,5 +1,5 @@
-# StatisticalPhysics
-Lecture notes, assignments, codes, etc. associated with ph2c: "Intro to Statistical Physics and Thermodynamics"
+# Intro to Statistical Physics and Thermodynamics
+Lecture notes, assignments, codes, etc. associated with ph2c
 ---- from (Caltech - Spring 2015) 
 
 ## Some Statistical Mechanics Links
