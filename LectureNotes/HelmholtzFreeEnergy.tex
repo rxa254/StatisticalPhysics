@@ -1,1 +1,23 @@
-\section{Helmholtz Free Energy and the Ideal Gas: April 16}
+\section{Free Energy: April 16}
+Early on we dealt with isolated systems. An isolated system has a 
+fixed energy, $U$. Once we bring this system into contact with a
+thermal reservoir, this is no longer true. So what will happen?
+Well, the fundamental assumption of statistical mechanics is still 
+true, so the system still seeks to be in the most probable state. \\
+
+Let's use the tools of our newly found canonical ensemble approach.
+Since the system is at a fixed temperature, we can rewrite the
+partition function as a sum over energies instead a sum over microstates,
+by including $g$, the multiplicity:
+\begin{align}
+Z(\tau) &\equiv \sum_s e^{-\epsilon_s/\tau} \\
+        &= \sum_{\epsilon_s} g(\epsilon_s) e^{-\epsilon_s/\tau} \\
+        &= \sum_{\epsilon_s} e^{\sigma(\epsilon_s)} e^{-\epsilon_s/\tau}
+\end{align}
+Then we can define a new quantity, the \emph{free energy}, as
+$f \equiv \epsilon - \tau \sigma$. To find the most probable state, we
+can maximize the probability (\cref{eq:PofS}), expressed in terms of energy (using the
+same swap as above):
+\begin{equation}
+P(\epsilon) = \frac{g(\epsilon) exp(-\epsilon/\tau)}{Z}
+\end{equation}
