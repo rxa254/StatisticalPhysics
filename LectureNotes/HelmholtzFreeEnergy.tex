@@ -28,3 +28,15 @@ $F = \Braket{f(\epsilon)}$ (just as we did for the energy, $U$). Using also the 
 \begin{equation}
 P(\epsilon) = exp((F - \epsilon)/\tau)
 \end{equation}
+
+We can also calculate a few useful \textbf{differential relations} with the free energy. Starting with the differential of F (and including the thermodynamic identity):
+\begin{align}
+dF &= dU - \tau d\sigma - \sigma d\tau \\
+   &= -\sigma d\tau - p dV
+\end{align}
+we find the following two relations for the partial derivatives of $F$:
+\begin{align}
+\bigg(\frac{\partial F}{\partial \tau}\bigg)_V = -\sigma \\
+\bigg(\frac{\partial F}{\partial V}\bigg)_\tau = -p
+\end{align}
+
