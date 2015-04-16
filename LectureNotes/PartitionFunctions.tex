@@ -34,7 +34,7 @@ We would like to normalize the probability so that
 $\sum_s P(s) = 1$. To do this, we just sum over all possible energy states.
 
 \begin{equation}
-P(s) = \frac{exp(-\epsilon_s/\tau_R)}{\sum_s exp(-\epsilon_s/\tau_R)} = 1
+P(s) = \frac{exp(-\epsilon_s/\tau_R)}{\sum_s exp(-\epsilon_s/\tau_R)}
 \end{equation}
 and where we will define the \emph{Partition Function}\footnote{an oddly named function for sure} as
 \begin{equation}
@@ -62,14 +62,36 @@ dW &= F dx \\
 \end{align}
 here we have used the fact that pressure is defined as a force per unit area.
 So we have that the change in energy, for a small change in volume is just
-$dU = p dV$. If we make this change small enough and slowly enough, the change will be isentropic.
+$dU = p dV$. If we make this change small enough and slowly enough, the change will be isentropic. The entropy is unchanged precisely the change in volume is made such that the microstate does not change (although the energy does).
+Therefore we can define the pressure as:
 
+\begin{equation}
+p = -\bigg(\frac{\partial U}{\partial V}\bigg)_{\sigma}
+\label{eq:Pressure}
+\end{equation}
 
-\subsection{Free Energy}
+Why the minus sign? If we allow a balloon filled with gas to do work by expanding, we know that it is doing work and delivering energy to the environment. Therefore a positive change in volume of the system will \textit{decrease} the system's energy. So there's a minus sign.
+
+$\sigma, U, V$, and $N$ are all \textit{extensive parameters} and $\sigma$ depends on the other three. If we leave $N$ fixed, there must be a clean relation between
+$U$ and $V$ for all isentropic changes. The expression for the differential of
+entropy will be:
+\begin{equation}
+d\sigma(U, V) = \bigg(\frac{\partial \sigma}{\partial U}\bigg)_{V} dU +
+	            \bigg(\frac{\partial \sigma}{\partial V}\bigg)_{U} dV
+\end{equation}
+Setting the left hand side equal to zero, dividing through by $dV$, and then substituting in our previous expressions for pressure (\cref{eq:Pressure})
+and temperature (\cref{eq:Temp}), we get the following relationship:
+
+\begin{equation}
+\frac{p}{\tau} = \bigg(\frac{\partial \sigma}{\partial V}\bigg)_{U}
+\end{equation}
+
+putting this together with the previous equation, we find that
+$dU = \tau d\sigma - p dV$, the expression for the total energy of
+the system.
 
 
 \subsection{Summary}
-
 \begin{itemize}
 \item The probability of finding a system (in microstate $s$ with
 	energy $\epsilon_s$, in thermal equilibrium with a reservoir 
