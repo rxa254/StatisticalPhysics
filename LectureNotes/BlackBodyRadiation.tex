@@ -102,3 +102,15 @@ where the factor of 2 is for both polarizations, the $1/8$ because we only want 
 integral. We can look up~\footnote{you can do it for yourself in a few steps if you want: multiply top and bottom by $e^{-x}$ and then recall our infinite sum for 
 $1/(1-x)$} the integral in a book or Mathematica to find that its $\pi^4/15$.
 
+Its useful to also look at the spectral distribution of the energy. To get that
+we can rewrite the integrand above as:
+\begin{align}
+\frac{U}{V} &= \int_{0}^{\infty} u_{\omega} d\omega
+	        &= \frac{\hbar}{\pi^2 c^3} \frac{\omega^3}{e^{\hbar \omega/\tau} - 1}
+\end{align}
+where we've moved the volume ($V = L^3$) over to the left hand side and used
+our expression from above to replace $n$ with $\omega$. This
+\textit{spectral density}, $u_{\omega}$, is called the
+\emph{Planck Black Body Spectrum} and the theoretical and experimental work which
+gave rise to it was the first evidence for $\hbar$ and was the birth of
+Quantum Mechanics.
