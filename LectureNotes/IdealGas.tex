@@ -1,0 +1,30 @@
+\section{Ideal Gas: April 16}
+As a first look at the Ideal Gas model, we start by assuming that we have $N$ identical point like particles in a box. These particles do not interact with each other and, by the virtue of being point-like, we can ignore the rotational and vibrational energies which real molecules have.\\
+
+We can then procede to solve for the quantum wavefunctions and energies just as we do for the standard "particle-in-a-box" problem (cf. K\&K, Ch.\,1, pp.\,9-10).
+\begin{equation}
+\hat{H} \Braket{\Psi} = E \Braket{\Psi}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{Figures/ParticleBoxPlot.pdf}
+\caption{Example wavefunction for a particle in a square 2D box 
+	with sides of length $L$}
+\end{figure}
+
+For this potential (the box), the Hamiltonian is just that for a free 
+particle:
+
+\begin{equation}
+\hat{H} = -\frac{\hbar^2}{2 m} \nabla^2
+\end{equation}
+
+This type of wave equation has solutions of the form $A \sin{x} + B \cos{x}$.
+By including the boundary conditions that $\Braket{\Psi} = 0$ when
+($x, y, z$) = $0$ or $L$, we can eliminate the cosine terms and we are left
+with:
+\begin{equation}
+\Psi(x,y,z) = \mathcal{C} \sin(n_x \frac{\pi}{L} x) \sin(n_y \frac{\pi}{L} y) \sin(n_z \frac{\pi}{L} z)
+\end{equation}
+where $\mathcal{C}$ is the normalization constant.
