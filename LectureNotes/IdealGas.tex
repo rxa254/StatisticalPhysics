@@ -61,7 +61,39 @@ gas particles are identical, we weight it by the number of identical permutation
 Z_N = \frac{Z_1}{N!} = \frac{(n_Q V)^N}{N!}
 \end{equation}
 
+
+
 \subsection{The Ideal Gas Law}
+To understand the macroscopic properties of the N particle ideal gas, we can start with our expression for the Free Energy in terms of the Partition Function:
+\begin{align}
+F &= -\tau~\log Z_N \\
+  &= -\tau~(N \log Z_1 - \log N!) \\
+  &= -\tau~(N \log{n_Q V} - \log N!)
+\end{align}
+
+From \cref{eq:dFdX}, we have that
+\begin{align}
+p &= -\bigg(\frac{\partial F}{\partial V}\bigg)_\tau \\
+  &= N \tau / V
+\end{align}
+and changing from our 'fundamental' units to SI units, we recover the Ideal Gas Law:
+\begin{equation}
+\boxed{p V = N k_B T}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
