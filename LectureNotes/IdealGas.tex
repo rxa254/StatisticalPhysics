@@ -27,4 +27,26 @@ with:
 \begin{equation}
 \Psi(x,y,z) = \mathcal{C} \sin(n_x \frac{\pi}{L} x) \sin(n_y \frac{\pi}{L} y) \sin(n_z \frac{\pi}{L} z)
 \end{equation}
-where $\mathcal{C}$ is the normalization constant.
+where $\mathcal{C}$ is the normalization constant. After normalization (to set the total probability equal to 1), we can get the quantized energies by plugging into the Schr\"odinger Equation above:
+\begin{equation}
+\epsilon_n = \frac{\hbar^2}{2 m}\bigg(\frac{\pi}{L} \bigg)^2 (n_x^2 + n_y^2 + n_z^2)
+\label{eq:IdealGasEnergies}
+\end{equation}
+
+\subsection{Partition Function}
+We can now begin using our standard canonical ensemble 'toolbox' to derive relationships for the macroscopic observables of the system. The Boltzmann factor for a single particle is just $exp(-\epsilon_n/\tau)$ and the Partition function is
+\begin{equation}
+Z_1 = \sum_{n_x} \sum_{n_y} \sum_{n_z} e^{-\epsilon_n/\tau}
+\end{equation}
+Unsurprisingly, we would like to convert this summation into an integral in order to solve it, but is this really valid? It is, but only if the error between the sum and the series is small; i.e. true if $\epsilon_{n+1} - \epsilon_n \ll \tau$. 
+At room temperature, $\tau = k_B T = (1.38 \times 10^{-23} J/K)(300 K)$. 
+To convert to eV, we divide by the electron charge ($1.602 \times 10^{-19} C$), 
+so $\tau \simeq \frac{1}{40} eV$. The
+prefactor in \cref{eq:IdealGasEnergies} is $\sim 10^{-16} eV$ for a $1~mm^3$ box,
+so the approximation made by using an integral instead of an infinite series is extremely accurate even at the nano-Kelvin temperature now achievable through modern cryogenic methods.\\
+
+We can then perform the integral by noting that its separable into three integrals (one for each $n_i$) and that each integral is of the form $\int exp(-\alpha^2 x^2)$, which we have done before and can look up in Appendix A of K\&K or 
+\href{http://www.wolframalpha.com/input/?i=integrate\%20exp(-a\%5E2\%20x\%5E2)\%20from\%20x\%3D0..infinity}{Wolfram Alpha}
+
+
+

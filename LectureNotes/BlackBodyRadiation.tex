@@ -40,7 +40,7 @@ and to find the average occupancy of each mode we just multiply by $s$ and sum o
 \Braket{s} &= \sum_{s=0}^{\infty} s~P(s) \\
            &= \frac{1}{Z} \sum_{s=0}^{\infty} s~e^{-s \hbar \omega / \tau}
 \end{align}
-We can perform the sum here by transforming it into a more fmailiar form. To do this note that:
+We can perform the sum here by transforming it into a more familiar form. To do this note that:
 \begin{equation}
 \sum s~e^{-s x} = -\frac{d}{dx} \sum e^{-s x}
 \end{equation}
@@ -97,6 +97,7 @@ U &= 2 \times \frac{1}{8} \times 4 \pi
 \int_{0}^{\infty} n^2 \frac{\hbar \omega_n}{exp(\hbar \omega_n / \tau) - 1} dn \\
   &= \frac{L^3 \tau^4}{\pi^2 \hbar^3 c^3} \int_{0}^{\infty} \frac{x^3}{e^x - 1} dx \\
   &= \frac{\pi^2 L^3 \tau^4}{15 \hbar^3 c^3}
+\label{eq:BBenergy}
 \end{align}
 where the factor of 2 is for both polarizations, the $1/8$ because we only want to consider one octant of the spherical volume (where the wavenumbers are positive), and the $4 \pi$ covers the angular part of the volume integral. We then have made the substitution $x = \pi \hbar c n / L \tau$ to get the dimensionless 
 integral. We can look up~\footnote{you can do it for yourself in a few steps if you want: multiply top and bottom by $e^{-x}$ and then recall our infinite sum for 
