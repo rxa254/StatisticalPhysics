@@ -46,7 +46,24 @@ prefactor in \cref{eq:IdealGasEnergies} is $\sim 10^{-16} eV$ for a $1~mm^3$ box
 so the approximation made by using an integral instead of an infinite series is extremely accurate even at the nano-Kelvin temperature now achievable through modern cryogenic methods.\\
 
 We can then perform the integral by noting that its separable into three integrals (one for each $n_i$) and that each integral is of the form $\int exp(-\alpha^2 x^2)$, which we have done before and can look up in Appendix A of K\&K or 
-\href{http://www.wolframalpha.com/input/?i=integrate\%20exp(-a\%5E2\%20x\%5E2)\%20from\%20x\%3D0..infinity}{Wolfram Alpha}
+\href{http://www.wolframalpha.com/input/?i=integrate\%20exp(-a\%5E2\%20x\%5E2)\%20from\%20x\%3D0..infinity}{Wolfram Alpha}.
+\begin{align}
+Z_1 &= L^3 \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2} \\
+    &= n_Q V
+\end{align}
+where $V = L^3$ and $n_Q \equiv \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2}$, which we define as the \emph{Quantum Concentration}. Since for most gases at
+room temperature, the single particle density ($1/V$) is much smaller than
+$n_Q$, $Z_1 \ll 1$, and the \textit{classical approximation} is valid. Otherwise, we would have to consider the quantum entanglement between the molecules.\\
+
+For distinguishable particles, the multi-particle partition function is just the product of the individual particle partition functions, just as the multi particle multiplicity is the product of the single particle multiplicities. Since the
+gas particles are identical, we weight it by the number of identical permutations:
+\begin{equation}
+Z_N = \frac{Z_1}{N!} = \frac{(n_Q V)^N}{N!}
+\end{equation}
+
+\subsection{The Ideal Gas Law}
+
+
 
 
 
