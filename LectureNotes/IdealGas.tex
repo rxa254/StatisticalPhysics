@@ -1,4 +1,5 @@
-\section{Ideal Gas: April 16}
+\section{Ideal Gas I: April 16}
+\label{s:IdealGasI}
 As a first look at the Ideal Gas model, we start by assuming that we have $N$ identical point like particles in a box. These particles do not interact with each other and, by the virtue of being point-like, we can ignore the rotational and vibrational energies which real molecules have.\\
 
 We can then procede to solve for the quantum wavefunctions and energies just as we do for the standard "particle-in-a-box" problem (cf. K\&K, Ch.\,1, pp.\,9-10).
@@ -51,7 +52,13 @@ We can then perform the integral by noting that its separable into three integra
 Z_1 &= L^3 \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2} \\
     &= n_Q V
 \end{align}
-where $V = L^3$ and $n_Q \equiv \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2}$, which we define as the \emph{Quantum Concentration}. Since for most gases at
+where $V = L^3$ and 
+\begin{equation}
+n_Q \equiv \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2}
+\label{eq:QuantConc}
+\end{equation} 
+which we define as the \emph{Quantum Concentration}. Since 
+for most gases at
 room temperature, the single particle density ($1/V$) is much smaller than
 $n_Q$, $Z_1 \ll 1$, and the \textit{classical approximation} is valid. Otherwise, we would have to consider the quantum entanglement between the molecules.\\
 
@@ -59,6 +66,7 @@ For distinguishable particles, the multi-particle partition function is just the
 gas particles are identical, we weight it by the number of identical permutations:
 \begin{equation}
 Z_N = \frac{Z_1}{N!} = \frac{(n_Q V)^N}{N!}
+\label{eq:IdealGasZ}
 \end{equation}
 
 

@@ -46,17 +46,41 @@ If we start off near equilibrium, and a small amount of particles,
 $dN_1 > 0$, is moved from $\mathcal{S}_2$ to $\mathcal{S}_1$ to
 bring the system closer to equilibrium, we know that $F$ should get smaller:
 \begin{align}
-dF &= d(F_1 + F_2) \le 0 \\
-   &= (\mu_1 - \mu_2) dN_1 \le 0
+dF &= d(F_1 + F_2) < 0 \\
+   &= (\mu_1 - \mu_2) dN_1 < 0
 \end{align}
 so it must be that $\mu_1 < \mu_2$. The particle flow is from a region of
-higher to lower chemical potential.
+higher to lower chemical potential. As long as we're treating the system as if the particles are non-interacting, we can also assert that the particles of one species do not effect the others and so a system with a collection of different kinds of particles will have a chemical potential for each kind:
+\begin{equation}
+\mu_i = \bigg(\frac{\partial F}{\partial N_i}\bigg)_{\tau,V,N_{i \neq j}}
+\end{equation}
 
 
+\subsection{Ideal Gas}
+From \cref{s:IdealGasI}, we have the expression for the Ideal Gas
+Partition function (cf.~\cref{eq:IdealGasZ}) and the Quantum 
+Concentration (cf.~\cref{eq:QuantConc}). Using Stirling's 
+approximation (cf.~\cref{eq:Stirling}) we can write the Free Energy
+as:
+\begin{align}
+F &= -\tau \log{\frac{Z_{1}^N}{N!}} \\
+  &= -\tau \bigg[N \log{n_Q V} - N \log{N} + N \bigg] 
+\end{align}
+and the chemical potential is then:
+\begin{align}
+\mu &= \bigg(\frac{\partial F}{\partial N}\bigg)_{\tau,V} \\
+    &= -\tau~(\log{n_Q V} - \log{N}) \\
+    &= \tau \log{\frac{n}{n_Q}}
+\end{align} 
+where $n \equiv N/V$ is the number density for the gas 
+particles (molecules). Since, for the ideal gas, $n \ll n_q$, the
+chemical potential will always be very negative. An ideal gas
+with a higher number density will have a more positive potential
+and so the particles will flow from the system of high density
+into the system with low density, just as your intuition would
+tell you.
 
 
-
-
-
-
+\subsection{Maxwell Relations}
+\label{s:MaxwellRelations}
 
