@@ -1,0 +1,62 @@
+\section{Chemical Potential: April 28}
+We have so far studied systems in which the volume and temperature are allowed to vary. In the microcanonical ensemble of chapters 1 \& 2, we used the Fundamental Postulate of Statistical Mechanics:\\
+\\
+\doublebox{An isolated system in equilibrium is equally likely to be found in any of its available microstates.}\\
+\\
+to find the most probable state. In the canonical ensemble we were introduced to the concepts of the Helmholtz Free Energy, the Boltzmann Factor, and the Partition Function. This was useful in describing the behavior of a system in thermal equilibrium with another system (often a very large Reservoir or Heat Bath).\\
+
+We could also imagine allowing the volume or the number of particles to change. We have already seen an example of this in the blackbody radiation case -- there the number of particles was \textit{not conserved}.\\
+
+Here we would like to consider the case where the particle number \emph{is} conserved, but where we allow the particles (as well as the thermal energy)to flow between the two systems, $\mathcal{S}_1$ and $\mathcal{S}_2$. 
+This is called \textit{diffusive contact}. 
+We will use the tools developed for the canonical ensemble here again.
+Some examples where this will be a useful picture:
+\begin{itemize}
+\item Permeable membrane between two boxes of gas.
+\item Adsorption / contamination of a gas onto a surface, such as might occur in thin film deposition or contamination of a silicon wafer in a clean room environment.
+\item Flow of particles in a gravitational field: barometric pressure or relative gas concentration in the Earth's atmosphere.
+\item ...
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{Figures/fugacity04.jpg}
+\caption{\url{http://www.nzepc.auckland.ac.nz/features/fugacity/}}
+\end{figure}
+
+Just as before, when we only had thermal contact, the 
+free energy ($F = -\tau \log{Z}$) will be minimized when the two
+systems come to equilibrium; i.e. when the two non-equilibrium
+systems are allowed to diffuse into each other, they will change
+particle concentrations in the way that \textit{minimizes the total
+free energy}: $F = F_1 + F_2$. To find the minimum, we set the differential equal to zero:
+\begin{align}
+dF &= \bigg(\frac{\partial F_1}{\partial N_1}\bigg) dN_1
+	- \bigg(\frac{\partial F_2}{\partial N_2}\bigg) dN_1 \\
+   &= (\mu_1 - \mu_2) dN_1 = 0
+\end{align}
+where we have used the total particle number conservation ($N = N_1 + N_2$)
+to set $dN_1 = -dN_2$. We can define the \textit{chemical potential}:
+\begin{equation}
+\boxed{\mu \equiv \bigg(\frac{\partial F}{\partial N}\bigg)_{\tau,V}}
+\label{eq:ChemPot}
+\end{equation}
+
+If we start off near equilibrium, and a small amount of particles, 
+$dN_1 > 0$, is moved from $\mathcal{S}_2$ to $\mathcal{S}_1$ to
+bring the system closer to equilibrium, we know that $F$ should get smaller:
+\begin{align}
+dF &= d(F_1 + F_2) \le 0 \\
+   &= (\mu_1 - \mu_2) dN_1 \le 0
+\end{align}
+so it must be that $\mu_1 < \mu_2$. The particle flow is from a region of
+higher to lower chemical potential.
+
+
+
+
+
+
+
+
+
