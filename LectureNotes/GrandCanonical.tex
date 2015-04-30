@@ -1,9 +1,59 @@
 \section{The Grand Canonical Ensemble: April 30}
-Microcanonical Ensemble:
 
-Canonical Ensemble:
+\textbf{Microcanonical Ensemble:} An isolated system. No thermal, mechanical, or diffusive contact with the outside world. For example, when we considered applying a magnetic field to the isolated system of spins, we did not take into account the effect this had on the thing producing the field.\\
 
-Grand Canonical Ensemble:
+\textbf{Canonical Ensemble:} The system is connected to a heat bath. The temperature of the heat bath is not effected by the connection - its assumed that the heat bath (reservoir) is large in comparison with the system so that its temperature is not changed by contact.\\
+
+\textbf{Grand Canonical Ensemble:} In this model, we allow both thermal and diffusive contact. The reservoir determines the temperature of the combined system and the total number of particles is fixed, but the particles are allowed to flow between system and reservoir.\\
+
+Given the added property of diffusion, we can now bring into action the techniques we used to arrive at the canonical ensemble picture. So we'd like to come up with formulae analagous to the Boltzmann 
+factor (\cref{s:BoltzmannFactor}) and the 
+Partition Function (\cref{s:PartitionFunction}).\\
+
+\subsection{The Gibbs Factor}
+For a given microstate $\mathcal{S}$ of our system, it will have $N$ particles and an energy $\epsilon_S$. The probability that our system is in this particular microstate is:
+\begin{equation}
+P(N,\epsilon_S) \propto
+g_{\mathcal{R}}(U_0-\epsilon_S, N_0-N) g_{\mathcal{S}}(\epsilon_S,N)
+\label{eq:Pgrand1}
+\end{equation}
+where $g_{\mathcal{S}}(\epsilon_S,N) = 1$ since this is for a precisely
+defned microstate (i.e. not an ensemble of microstates corresponding to a particular macrostate).
+
+Since $N \ll N_0$ and $\epsilon_S \ll U_0$, it is reasonable to simplify our expression by taking the Taylor expansion of the 
+entropy ($\sigma_{\mathcal{R}} = \log{g_{\mathcal{R}}}$), just as we did for the Boltzmann factor.
+\begin{align}
+\sigma_{\mathcal{R}}(U_0-\epsilon_S, N_0-N) &\simeq 
+\sigma_{\mathcal{R}}(U_0, N_0)
+-\epsilon_S \bigg(\frac{\partial \sigma_{\mathcal{R}}}{\partial U}\bigg)_N
+-N \bigg(\frac{\partial \sigma_{\mathcal{R}}}{\partial N}\bigg)_U
++ \mathcal{O}(U^2) + \mathcal{O}(N^2) +... \\
+       &= \sigma_{\mathcal{R}}(U_0, N_0) - \frac{\epsilon_S}{\tau} + 
+       \frac{\mu~N}{\tau}
+\end{align}
+where we have used our knowledge of partial derivatives of entropy to express the entropy in terms of the temperature and the chemical potential. So we can now rewrite \cref{eq:Pgrand1} as:
+\begin{equation}
+P(N,\epsilon_S) = 
+\frac{e^{-\epsilon_{S}/\tau + \mu N/\tau}}{\mathscr{Z}}
+\end{equation}
+where the factor $e^{\sigma_{\mathcal{R}}(U_0, N_0)}$ has been absorbed into the normalization factor in the denominator. The exponential in the numerator
+is called the \emph{Gibbs factor}. It is the analog of the Boltzmann factor for a system in which the particle number is not fixed.
+
+\subsection{The Grand Partition Function}
+Since we want the above equation to be normalized such that 
+$\sum P(N,\epsilon_S) = 1$, the normalization factor must be
+\begin{equation}
+\mathscr{Z} = \sum_{N=0}^{\infty} \sum_{s(N)} e^{-\epsilon_{S}/\tau + \mu N/\tau}
+\end{equation}
+which is just the sum over all possible states and numbers of particles of the Gibbs factor. This normalization function is called the 
+\emph{Grand Partition Function} or sometimes the Gibbs sum.
+
+
+\subsection{Maxwell Relations}
+\label{s:MaxwellRelations}
+
+
+
 
 
 \subsection{Fugacity}
@@ -12,4 +62,12 @@ Grand Canonical Ensemble:
 \centering
 \includegraphics[width=8cm]{Figures/fugacity04.jpg}
 \caption{\url{http://www.nzepc.auckland.ac.nz/features/fugacity/}}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{Figures/fugacity_ngrams.png}
+\caption{The popularity of the word 'fugacity' over the years. Plot made using Google NGram Viewer. \url{http://www.informationisbeautiful.net/visualizations/google-ngram-experiments/}}
 \end{figure}

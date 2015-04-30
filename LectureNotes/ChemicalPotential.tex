@@ -76,6 +76,23 @@ into the system with low density, just as your intuition would
 tell you.
 
 
-\subsection{Maxwell Relations}
-\label{s:MaxwellRelations}
+\subsection{Barometric Pressure in the Earth's Atmosphere}
+As an example of the utility of the chemical potential, we can examine
+a simplified model of the atmosphere. Assume that the atmosphere
+is in thermal and chemical equilibrium. To simplify the problem,
+will assume that there is no significant temperature gradient for the
+regions that we are considering (in reality, of course, higher
+altitudes are much colder and there is often wind and turbulence).
 
+In addition to the internal chemical potential, $\mu_{int}$, there is
+an external potential,$\mu_{grav} = m g h$, due to gravity. If the lower
+and upper atmosphere are in equilibrium, we must set these to be equal.
+\begin{align}
+\mu_{total} = \tau \log{n(h)/n_Q} = \tau \log{n(0)/n_Q}
+\end{align}
+Solving for $n(h)$, we find:
+\begin{align}
+n(h) &= n(0) e^{-m g h / \tau} \\
+p(h) &= p(0) e^{-m g h / \tau}
+\end{align}
+since, for an ideal gas, $p = n \tau$.
