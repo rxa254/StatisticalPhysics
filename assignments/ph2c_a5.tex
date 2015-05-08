@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0.0in}
+\setlength{\textwidth}{6.7in}
+\setlength{\textheight}{8.5in}
+%
+%\input mydefs.tex
+\def\vev#1{\left\langle #1\right\rangle}
+\def\hb{\hfill\break}
+%
+\begin{document}
+%
+\centerline{\large\bf Physics 2c \hfill Assignment V \hfill  5/7/15}
+
+\medskip
+\begin{list}{}{\leftmargin 2.4cm \labelsep .2cm \labelwidth 2.2cm}
+\item[{\bf Reading:}  \hfill ] This week: K\&K, Chapter 5 - Chemical Potential. \hb
+                               and        K\&K, Chapter 6 - Ideal Quantum Gas. \hb
+                               Next week: K\&K, Chapter 7 - Fermi \& Bose Gases.
+\item[{\bf Problems:} \hfill ] Due in ph2 IN box, 4\,PM  Thursday, 5/14/15.
+\end{list}
+
+\hrule
+
+\begin{description}
+
+\item[{\bf V.1} ] {\bf Gas in a gravitational field.} K\&K 5.2, 5.3.
+
+\item[{\bf V.2} ] {\bf Gibbs sum.} K\&K 5.6.
+
+\item[{\bf V.3} ] {\bf Adsorption.} K\&K 5.8.\\
+\\
+\hrule
+
+\item[{\bf V.4}] {\bf Relativistic Gas.} K\&K 6.9.
+
+\item[{\bf V.5}] {\bf Gas with internal degrees of freedom.} K\&K 6.9.
+
+
+\end{description}
+
+\end{document}
+
+\item[{\bf V.5} ] {\bf Relation of pressure and energy density; pressure dispersion.}
+\begin{itemize}
+\item[a)]  K\&K 6.7.
+\item[b)] 
+Using the results of the above problem, 
+compute $\sigma_p^2 = \vev{(\Delta p)^2}$,
+the dispersion in the pressure, 
+and show that it is directly related to 
+$\sigma_E^2 = \vev{(\Delta E)^2}$,
+the dispersion in the energy.
+\item[c)] 
+Show that $\sigma_p^2 = \frac{2}{3V}\tau^2 \frac{\partial p}{\partial\tau}$.
+\end{itemize}
+
+
+
+
+\item[{\bf V.3} ] {\bf Convective isentropic equilibrium 
+   of the atmosphere.} K\&K 6.11.
+
+\item[{\bf V.4} ] {\bf Thermodynamic potentials and work.}
+A substance has the following properties:
+\begin{itemize}
+\item[ ] \vskip -.2cm
+\begin{itemize}
+\item[{\it i})] 
+At a particular constant temperature $\tau_0$,
+the mechanical work it does in expanding from $V_0$ to $V$ is
+$$W = \int^{V}_{V_0} p\,dV = N\tau_0 \log\left(\frac{V}{V_0}\right) . $$
+\item[{\it ii})] 
+The entropy at any temperature $\tau$ and volume $V$ is 
+$\sigma = N \frac{V_0}{V}\left(\frac{\tau}{\tau_0}\right)^\alpha$,
+where $\tau_0$ and $V_0$ are the constants of {\it i})
+and $\alpha$ is another constant.
+\end{itemize}
+\item[{\bf a)}]
+Calculate the Helmholtz free energy $F(V,\tau)$ relative to its value
+at $F(V_0,\tau_0)$; that is, find $dF = F(V,\tau) - F(V_0,\tau_0)$.
+[ Hint: The difference in $F$ between any two points
+in the $(V,\tau)$ plane is the line integral of the partial derivatives
+of $F$ along any convenient path connecting the two points.
+As a proper thermodynamic potential, the difference is independent
+of the path taken.]
+\item[{\bf b)}]
+What is the equation of state?
+\item[{\bf c)}]
+Find $U(V,\tau)$.
+\item[{\bf d)}]
+Find the work done in an isothermal expansion from $V_0$ to $V$
+at an arbitrary temperature $\tau$.
+\end{itemize}
+
+\item[{\bf V.5} ] {\bf The R\"uchardt Experiment.} 
+This simple experiment allows one to measure the ratio
+$\gamma = C_p/C_V$ for an ideal gas.
+A bottle of volume $V$ is filled with an ideal gas.
+It has a precision-bore neck of area $A$,
+into which is fitted a piston of mass $M$,
+free to move up and down without friction
+inside the neck; the gas cannot leak out of the bottle,
+neck and piston enclosure.
+The piston, once displaced from its equilibrium position
+and released, will bounce up and down
+at (angular) frequency $\omega$ 
+with a small amplitude
+(such that the total volume of the enclosure 
+is only slightly varying); its displacement 
+at any given time is given by $x$.
+The enclosure is insulated, so
+this process may be considered practically adiabatic. \\
+
+\rightline{Over $\rightarrow$}
+
+\unitlength=1in
+\begin{center}
+\begin{picture}(3,2)(0,0)
+\put(1.4,1.8){\line(0,-1){0.8}}
+\put(1.4,1.0){\line(-1,0){0.4}}
+\put(1.0,1.0){\line(0,-1){0.8}}
+\put(1.0,0.2){\line(1,0){1.0}}
+\put(2.0,0.2){\line(0,1){0.8}}
+\put(2.0,1.0){\line(-1,0){0.4}}
+\put(1.6,1.0){\line(0,1){0.8}}
+\put(1.4,1.4){\line(1,0){0.2}}
+\put(1.4,1.5){\line(1,0){0.2}}
+\put(1.7,1.3){\vector(0,1){0.3}}
+\put(1.8,1.5){\makebox(0,0){x}}
+\put(1.5,0.5){\makebox(0,0){V}}
+\put(1.3,1.45){\makebox(0,0){M}}
+\put(1.5,1.8){\makebox(0,0){A}}
+\end{picture}
+\end{center}
+\begin{itemize}
+\item[a)] What is the pressure $p$ of the gas
+inside the enclosure?
+\item[b)] Derive a differential equation
+for $x(t)$ in terms of $\gamma$, $p$, $M$, $V$, $A$.
+\item[c)] From the solution to part (b),
+derive an expression for $\gamma$ 
+in terms of $p$, $M$, $V$, $A$, and the period
+of oscillation, $T$.
+\end{itemize}
+
+\item[{\bf V.6} ] {\bf Thermodynamic Potentials.}
+The handout on Thermodynamic Potentials contains
+an awful lot of formulas. Some are bound to be wrong. In fact,
+I have {\it deliberately} introduced three errors in the formulas.
+Find them! 
+(You need not hand in the solution; it won't be graded.
+This problem is worth 0 points; your reward is an error-free 
+collection of formulas).
+
+\item[{\bf V.2} ] {\bf 2D Adsorbed gas.}
+A dilute ideal gas of $N$ atoms is at temperature $\tau$
+in a container of volume $V$.
+$N^\prime\ll N$ atoms are adsorbed on one of the walls,
+whose area is $A$.
+These adsorbed atoms are confined to the wall in the normal direction
+with a binding energy $\epsilon_0$, but are otherwise
+free to move in the plane of the wall
+(\ie, they form a two-dimensional ideal gas).
+\begin{itemize}
+\item[a)] 
+If $N^\prime$ is fixed, use the canonical ensemble 
+to find the chemical potential of the adsorbed atoms.
+\item[b)] 
+The gas on the wall is allowed to reach equilibrium
+with the gas volume.
+Find the average surface density of adsorbed atoms,
+$\vev{N^\prime}/A$, as a function of $\tau$ and $p$,
+the pressure of the contained gas.
+\unitlength=1cm
+\begin{center}
+\begin{picture}(10,3)(0,0)
+\put(3.5,1){\framebox(3,2){}}
+\put(5,2.5){\makebox(0,0){(gas)}}
+\put(5,2.0){\makebox(0,0){$N,\tau,V$}}
+\put(3.9,1.1){\circle*{0.2}}
+\put(4.4,1.1){\circle*{0.2}}
+\put(5.3,1.1){\circle*{0.2}}
+\put(5.9,1.1){\circle*{0.2}}
+\put(6.3,1.1){\circle*{0.2}}
+\put(1.3,1.1){\makebox(0,0){(adsorbed atoms)}}
+\put( 3, 1.1){\vector(1,0){0.75}}
+\put(1.3,0.7){\makebox(0,0){$N^\prime,\tau,A$}}
+%\put(8,0.5){\makebox(0,0){$N^\prime,\tau,A$}}
+%\put(7,0.5){\vector(-3,1){1.5}}
+\end{picture}
+\end{center}
+\end{itemize}
+
+
+\item[\underline{\bf Problem 3.}] {\bf Fermionic Photon Gas}.
+Consider a large box of volume $V$ whose walls are held at 
+constant temperature $\tau$.
+The box contains photons that are in thermal equilibrium with the walls.
+Suppose that, contrary to reality, the photons obey the Pauli Exclusion 
+Principle, so that each mode can only have zero or one photon in it.
+\begin{itemize}
+\item[{[3]}\ a)] 
+What is the thermal average of the number of photons 
+in a single mode of frequency $\omega$?
+\item[{[4]}\ b)] 
+What is the energy spectrum of the light inside the box?
+Compare this result with the one for ordinary black-body radiation.
+Give a simple physical explanation for any similarities or differences.
+\item[{[3]}\ c)] 
+What are the total number of photons and total energy
+stored inside the box?
+How do you expect these quantities to compare with 
+those for ordinary black-body radiation?
+(Leave any integrals you can't do in dimensionless form).
+\end{itemize}
+
+
