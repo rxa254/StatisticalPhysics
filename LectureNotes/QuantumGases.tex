@@ -56,13 +56,48 @@ using the expression $e^x = \sum x^N/N!$ to simplify the equation. As before, we
 \begin{align}
 \Braket{N} &= \tau \frac{\partial \log{\mathscr{Z}}}{\partial \mu}\\
 	       &= \lambda Z_1
+\label{eq:Nave}
 \end{align}
+
 Using our expressions for the fugacity ($\lambda = n/n_Q$) and the single particle Partition function ($Z_1 = V n_Q$), we just recover the obvious result that $\Braket{N} = N$. Which is a reassuring confirmation that this approach is valid.
 
 \subsection{Dilute Fermi Gas}
+According to the \href{http://en.wikipedia.org/wiki/Pauli_exclusion_principle}{Pauli Exclusion Principle}, two fermions cannot occupy the same state at the same time. The implication, for our analysis of particles in a box, is that the occupancy of each orbital can only be 0 or 1. The exclusion principle forbids having two electrons in a box with the same quantum numbers ($n_x, n_y, n_z$) unless they have opposite spin. So the Grand Canonical Partition function for Fermions just becomes:
+\begin{align}
+\mathscr{Z} &= 1 + e^{-(\epsilon - \mu)/\tau}
+\end{align}
+since there only two values (0 and 1) to sum over. Using \cref{eq:Nave}, we find that the average thermal occupancy of the single orbital we are considering is
+\begin{align}
+\Braket{N} &= \frac{\lambda e^{-\epsilon/\tau}}{1 + \lambda e^{-\epsilon/\tau}}\\
+           &= \frac{1}{e^{(\epsilon - \mu)/\tau} + 1}
+\end{align}
+which is the \emph{Fermi-Dirac Distribution Function}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=13cm]{Figures/FermiDirac.pdf}
+\caption{The Fermi-Dirac distribution for $\tau \simeq 0$ and $\tau = 0.1\epsilon_F$}
+\end{figure}
 
+\subsection{Dilute Bose Gas}
+The procedure for deriving the Bose-Einstein distribution follows the same logic:
+\begin{align}
+\mathscr{Z} &= \sum_{N=0}^{\infty} \lambda^N e^{-N \epsilon/\tau}\\
+            &= \frac{1}{1 - \lambda e^{-\epsilon/\tau}}
+\end{align}
+where the infinite series summation is valid as long as 
+$exp((\mu-\epsilon)/\tau) < 1$ or equivalently that $\epsilon > \mu$.
+So similarly to the FD case above, we can find the occupancy by taking a derivative and performing
+some algebraic simplification:
+\begin{equation}
+\Braket{N} = \frac{1}{e^{(\epsilon - \mu)/\tau} - 1}
+\end{equation}
+which is the \emph{Bose-Einstein Distribution Function}.
 
+\subsection{Density of States}
 
+\subsection{White Dwarf Stars}
+
+\subsection{Conduction Electronics in Metals}
 
 
 
