@@ -1,7 +1,68 @@
-\section{Debye Model: April 23}
-As it turns out, the vibrations in a regular solid can also be analyzed using
-the formalism of the Canonical ensemble, in much the same way as the blackbody
-radiation system.
+\section{Ideal Quantum Gases: May 5}
+A few weeks ago (cf. \cref{s:IdealGasI}), we did a first pass at examining the 
+Ideal Gas:
+\begin{itemize}
+\item N identical particles in a box.
+\item the particles are do not interact with each other
+\item the particles are point-like; no rotational or vibrational modes
+\end{itemize}
+
+We then used the expression for the quantized energy levels based on the
+'particle-in-a-box' Hamiltonian and found the Partition function (in the 
+Canonical Ensemble representation) and expressions for the Quantum
+Concentration and the Free Energy of the Ideal Gas. Now we want to look
+at this in more detail, taking into account quantum mechanics and showing
+how we recover the classical ideal gas behavior in the limit of high temperatures or low concentration.\\
+
+In K\&K, the term 'orbital' denotes a particular state. It is motivated by
+the meaning of orbital in the case of an atom, where each set of quantum
+numbers refers to a unique quantum state. For the more general use in
+statistical physics, we'll use the term 'orbital' even when there are
+particles with no nucleus to orbit.\\
+
+We use $n_i$ to refer to the occupancy of the $i^{th}$ state with 
+energy $\epsilon_i$. The total quantum state of our system is fully specified by knowledge of $n_i$. With that information we can proceed to employ all of the
+statistical mechanics tools that we have developed over the term to calculate
+expressions for the behavior.\\
+
+Our only constraints are that $\sum_i n_i = N$ (the total number of particles is fixed) and that the total energy of each microstate is given by:
+\begin{equation}
+\epsilon_s = \sum_i n_i \epsilon_i
+\end{equation}
+
+We will examine the case for three different kinds of particles:
+\begin{enumerate}
+\item Distinguishable particles, i.e. "classical" particles
+\item Fermions: $n_i = 0$ or $1$
+\item Bosons: $n_i = 0,1,2,3,...$
+\end{enumerate}
+these yield, respectively, Maxwell-Boltzmann, Fermi-Dirac, and Bose-Einstein
+statistics.
+
+\subsection{Ideal Gas}
+With $N$ particles in a box, we consider a single orbital to be our system and the rest of the orbitals to be the reservoir. Since particles can move between orbitals, we will consider the system to be in \emph{diffusive and thermal} contact with the reservoir. This is where the use of the Grand Canonical ensemble comes into play. The Grand Canonical partition function is given by the sum over all possible states and numbers of particles of the Gibbs factor:
+\begin{align}
+\mathscr{Z} &= \sum_{N=0}^{\infty} \sum_{s(N)} e^{-\epsilon_{S}/\tau 
+	+ \mu N/\tau}\\
+            &= \sum_N \lambda^N \sum_s e^{-\epsilon_{S}/\tau}
+\end{align}
+
+In the case of $N$ indistinguishable particles, we found that the sum over the states (which is just the $N$ particle Partition function) is $Z_1^N/N!$. So for the ideal gas we can see that the Grand Canonical partition function is:
+\begin{align}
+\mathscr{Z} &= \sum_N \lambda^N \frac{Z_1^N}{N!} \\
+	        &= e^{\lambda Z_1}
+\end{align}
+using the expression $e^x = \sum x^N/N!$ to simplify the equation. As before, we can find the thermal average number of particles by 'integrating' our observable, $N$, by the distribution. This gives us (after some algebra):
+\begin{align}
+\Braket{N} &= \tau \frac{\partial \log{\mathscr{Z}}}{\partial \mu}\\
+	       &= \lambda Z_1
+\end{align}
+Using our expressions for the fugacity ($\lambda = n/n_Q$) and the single particle Partition function ($Z_1 = V n_Q$), we just recover the obvious result that $\Braket{N} = N$. Which is a reassuring confirmation that this approach is valid.
+
+\subsection{Dilute Fermi Gas}
+
+
+
 
 
 
