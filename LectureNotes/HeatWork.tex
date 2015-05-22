@@ -1,5 +1,5 @@
 \section{Heat and Work: May 19}
-
+\label{s:HeatWork}
 This week, the objective is to study how heat and work behave in exchange between systems so that we can understand how practical devices work.\\
 
 For a system with fixed number of particles $N$, the total internal energy can be expressed as a function of the entropy and volume:
@@ -11,7 +11,7 @@ where the negative sign in the second term indicates that this is work done \tex
 For a system with fixed $N$, there are a number of different ways to perform work on a system other than the obvious mechanical way of compression/expansion (such as changing the external magnetic field).
 
 \subsection{Heat Engines}
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.7\columnwidth]{Figures/HeatEngineTable.png}
 \caption{Comparison of Heat Engine Properties}
@@ -45,21 +45,42 @@ The P-V and T-S diagrams (from Thermopedia \url{http://dx.doi.org/10.1615/AtoZ.c
 give graphical representations of the amount of work done.
 
 \begin{enumerate}
-\item The system begins at low temperature and low entropy. The system is compressed 
-adiabatically (isentropically) and the temperature increases to $\tau_h$.
+\item The system begins at low temperature and low entropy. The system 
+	is compressed adiabatically (isentropically) and the temperature 
+	increases to $\tau_h$.
 
-\item At constant temperature $\tau_h$, heat $Q_h$ is injected into the system (increasing its entropy)
-and the system expands along the 2 to 3 isotherm of the figure above.
+\item At constant temperature $\tau_h$, heat $Q_h$ is injected into the 
+	system (increasing its entropy) and the system expands along the 
+	2 to 3 isotherm of the figure above.
 
 \item The system is allowed to expand isentropically, going from $\tau_h$ to $\tau_l$
 
-\item Heat, $Q_l$, is extracted from the system as it moves back into its initial position.
+\item Heat, $Q_l$, is extracted from the system as it moves back 
+	into its initial position.
 
 \end{enumerate}
 
 
 \subsection{Refrigeration}
-Refrigeration is very nearly the opposite of the heat engine, when viewed in this diagramatic way.
+Refrigeration is very nearly the opposite of the heat engine, when viewed in this diagramatic way. The equivalent efficiency is called the \emph{coefficient of refrigerator performance}:
+\begin{equation}
+\gamma_c = \frac{\tau_l}{\tau_h - \tau_l}
+\end{equation}
+which is not to be confused with our other symbol, $\gamma$, which is the adaibatic coefficient for an ideal gas.
+
+\subsection{Path Dependence}
+Using our knowledge of the ideal gas law, we can now compute the energy exchanges made during the isothermal and isentropic portions of the Carnot cycle.
+
+
+\subsection{Otto Cycle (gasoline)}
+The Otto cycle is interesting to us because it describes the behavior of the the 4-stroke internal combustion engine powering most of Los Angeles traffic.
+
+\subsection{Stirling Engine}
+The Stirling Engine is a closed cycle heat engine with the internal working fluid being manipulated through contact with a hot and cold surfaces. It is a very high efficiency engine which does not rely on combustion. It can use any heat source (such as renewables) and can be made to work very quietly. 
+
+
+\subsection{Chemical Work}
+What about when we transform particles from one type to another?
 
 
 \subsection{Thermodynamic Impossibilities}
