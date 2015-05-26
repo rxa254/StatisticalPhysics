@@ -1,19 +1,120 @@
 \section{The Early Universe: May 26}
+Now that we have covered several of the techniques for deriving thermodynamic observables from the fundamentals of statistical mechanics, we can apply these tools to describe some of the features of the early universe (post Big Bang).
+
 
 \subsection{The Big Bang}
+The actual Big Bang and the first $\sim 10^{-30} s$ after it, are not well understood. The belief is that the universe started from a very hot and very dense state and evolved over billions of years into the state that we now observe. What happened before the big bang?, what made it bang?, was it the only big bang?, and are there going to be other similarly big bangs?, are some of the many unresolved questions in modern cosmology today.
 
-\subsection{The First Three Seconds}
+\subsection{The Universe is Expanding}
+In 1929, Edwin Hubble used the 100" Hooker Telescope, at the Mount Wilson Observatory in the hills north of Caltech, in combination with other
+measurements~\footnote{Henrietta Leavitt's observation of Cepheid variables were key in making the extra galactic calibrations, as were the measurements by
+Slipher and Humason} to discover that there was a linear relationship between the distance to a faraway galaxy and its observed recessional velocity.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\columnwidth]{Figures/Hubble1931.png}
+\caption{Data from Humason and Hubble (1931). Data below 2\,Mpc from
+	the original Hubble (1929) paper.}
+\label{fig:Hubble}
+\end{figure}
+The distance determination was made through a complicated chain of intermediate calibrations (the "galactic distance ladder") and the velocity by measuring the wavelengths of the observed spectra lines and comparing them to the spectral 'fingerprint' of molecules at rest on the earth.
+
+Since the expansion velcoity is proportional to the separation, we 
+can write the distance as $D(t) = a(t) D(t_0)$, where $D(t_0)$ is 
+the initial separation and $a(t)$ is the \textit{universal scale factor}.
+The gravitational acceleration at the edge of a spherical region of
+the universe is $\ddot{D(t)} = -G M / D(t)^2$, where $G$ is Newton's gravitational constant, $M = \frac{4}{3} \pi \rho(t) D(t)^3$ is the mass enclosed within the shell, and $\rho(t)$ is the mass-energy density. If the kinetic energy of the shell just equals the gravitational potential, then the density will be
+\begin{equation}
+\rho_{crit} = \frac{3 H^2}{8 \pi G}
+\end{equation}
+where $H$ is the Hubble constant ($H_0 \simeq 69~(km/s)/Mpc$). 
+
+\subsection{Inflation}
+Invented to solve several problems: flatness, isotropy, and ....
 
 \subsection{The First Three Minutes}
+When the universe is still very hot and less than a few milliseconds old,
+the density is dominated by relativistic particles (e.g. photons, neutrinos).
+The relative abundance of neutrons and protons is given by the Boltzmann factor:
+\begin{equation}
+\frac{n_n}{n_p} = exp\bigg(-\frac{\epsilon_{np}}{\tau}\bigg)
+\end{equation}
+where $\epsilon_{np} = (m_n - (m_p + m_e))c^2 \sim\,0.7\,MeV$ is the difference in the rest energies of the two states (neutron and proton + electron). This ratio will be close to unity as long as $T \gg 10^{10}\,K$.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\columnwidth]{Figures/NeutronAbundance.pdf}
+\caption{Relative Neutron abundance as a function of temperature in the early universe.}
+\label{fig:Neutrons}
+\end{figure}
+
+As the universe continued to cool eventually it reached a state where nucleons could form some of the light elements (e.g. $\prescript{1}{}H$, 
+$\prescript{4}{}He$) but when at what rate? By $\sim\,1\,s$ after the Big Bang, the temperature had become too low to maintain the proton-neutron balance and the fraction slowly drops as shown in \cref{fig:Neutrons}.
+
+In order for stable elements like helium and lithium to form, the free
+protons and neutrons must first form deuterons (1 proton + 1 neutron) which could then form $\prescript{4}{}He$ through the 
+$d + d \rightarrow \prescript{4}{}He + \gamma$ reaction. However, the binding energy of the deuteron is $\epsilon_{d} = (m_d - (m_p + m_n))c^2 \sim\,2.2\,MeV$
+and so this process is suppressed as long as there are enough 2.2\,MeV photons around to disrupt the deuterons.
+
+
+
+\begin{enumerate}
+\item While the universe is still very hot $T \gg 10^{10}$ K, 
+	neutrons and protons have about the same abundance.
+
+\item However, any nuclei that form at this stage (e.g., deuterium, 
+	via $p + n \rightarrow d + \gamma$) are immediately disrupted 
+	by high-energy photons (via $d + \gamma \rightarrow p + n$).
+
+\item When the universe is much older than the lifetime of a neutron 
+	in free space ($\sim10^3$ s), any remaining free neutrons will 
+	have decayed into protons. No nucleosynthesis can proceed beyond 
+	this point until stars form a billion years later.
+
+\item However, there is a sweet spot between these phases, when 
+	there are free neutrons around that can combine with protons 
+	without immediately getting separated again. In this phase, the 
+	light elements form.
+
+\item In principle one could imagine (as George Gamow did) that one 
+	would be able to produce all elements this way. However, there 
+	are no stable nuclei with 5 nucleons or 8 nucleons, so this 
+	means there is a bottleneck that prevents additional 
+	nucleosynthesis (basically because hydrogen and helium-4 are by 
+	far the most stable and common things around, but H+He and He+He 
+	both make unstable things).
+
+\item The relative abundances of H, D, He, etc. depend on the 
+	relative numbers of baryons and photons in the universe. 
+	Therefore, given a measured baryon fraction the relative abundances 
+	are all predicted with no free parameters. This is a strong test of the
+	standard model.
+\end{enumerate}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\columnwidth]{Figures/I02-09-nucleosynthesis1.jpg}
+\caption{Pictorial description of Nucleosynthesis \url{http://universe-review.ca/F02-cosmicbg.htm}}
+\label{fig:Neutrons}
+\end{figure}
+
 
 \subsection{Recombination}
-Once the expansion of the universe causes the temperature to get low enough, the number of photons available to ionize hydrogen becomes low enough that the electrons and protons in the plasma are able to form neutral hydrogen.
+While the universe is still hot, the electron and proton gas/plasma is in thermal equilibrium with the photons. They interact because the photons are able to scatter strongly off the electrons\footnote{and the protons to a lesser extent, since the Thompson scattering cross section is proportional to 1/m$^2$. The Thompson scattering approximation is valid as long as the photon 
+energy ($\sim 1\,eV$) is much less than the rest mass of the 
+electron ($0.5\,MeV$).} since they are charged.
+
+As the universe cools through expansion, the number of photons available to ionize hydrogen becomes low enough that the electrons and protons in the plasma are able to form neutral hydrogen ($\prescript{1}{}H$). 
 \begin{equation}
 p + e^- \longrightarrow H
 \end{equation}
 
 \subsection{The Cosmic Background Radiation}
-This happens at a redshift of $z \sim 1100$, when the universe was only 400000\,years old.
+This happens at a redshift of $z \sim 1089$, when the universe was only 380,000\,years old.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\columnwidth]{Figures/COBE_FIRAS.pdf}
+\caption{Cosmic Background Radiation spectrum, as measured with the FIRAS instrument on board the COBE satellite. Data from NASA: \href{http://lambda.gsfc.nasa.gov/product/cobe/firas_prod_table.cfm}{FIRAS Monopole Spectrum}}
+\label{fig:FIRAS}
+\end{figure}
 
 \subsection{The Epoch of Reionization}
 The Epoch of Reionization refers to a time much later in the thermal history of the universe when the neutral gas went from almost completely neutral to very ionized. It is suspected that
@@ -22,15 +123,33 @@ universe remained neutral after the time of Recombination unit a $z$ of $\sim 10
 \centering
 \includegraphics[width=\columnwidth]{Figures/21-centimeter-cosmology.jpg}
 \caption{History of the universe, highlighting the Epoch of Reionization.
-credti: \href{http://discovermagazine.com/2014/april/12-first-light}{Roen Kelly, Discover Magazine, April 2014}}
+credit: \href{http://discovermagazine.com/2014/april/12-first-light}{Roen Kelly, Discover Magazine, April 2014}}
 \label{fig:EoR}
 \end{figure}
 
 \subsection{Evidence for Dark Matter and Dark Energy}
 
+\subsection{Summary}
+\begin{itemize}
+\item Nucleosynthesis describes the abundances of the light elements 
+	that we observe in the universe. By solving for the equilibrium
+	population of photons, nucleons, and atoms as the universe cools,
+	we find that by mass, 75\% is $\prescript{1}{}H$ 
+	and 25\% is $\prescript{4}{}He$.
+
+\item The CBR comes to us after the plasma has cooled into atoms. 
+	Before this time, the photons and electrons are in thermal 
+	equilibrium. Afterwards, the universe becomes mostly transparent 
+	to this thermal radiation and the resulting photon field is 
+	cooled isentropically as the universe expands. The 2.7\,K 
+	blackbody radiation that we observe today is this cosmological relic.
+\end{itemize}
+
 \subsection{Further Reading}
 \begin{itemize}
-\item \href{http://discovermagazine.com/2014/april/12-first-light}{Discover article on Epoch of Reionization}
+\item \href{http://discovermagazine.com/2014/april/12-first-light}{Discover magazine article on Epoch of Reionization}
+\item \href{http://www.cambridge.org/resources/0521846560/7706_Saha%20equation.pdf}{Excerpt on Saha Equation from Hale Bradt's book}
 \item \href{http://en.wikipedia.org/wiki/Physical_cosmology}{Wikipedia: Physical Cosmology}
+\item \href{http://www.goodreads.com/book/show/150131.The_First_Three_Minutes}{The First Three Minutes}, by Steven Weinberg.
 \end{itemize}
 
