@@ -48,6 +48,7 @@ and the right hand side can be summed in the same way as \cref{eq:PartPlanck}, a
 So finally we arrive at the expression for the average occupancy:
 \begin{equation}
 \boxed{\Braket{s} = \frac{1}{e^{\hbar \omega / \tau} - 1}}
+\label{eq:PlanckOccupy}
 \end{equation}
 which is the \emph{Planck distribution} for the occupancy of a single mode in thermal equilibrium with a heat bath of temperature $\tau$. The average energy in each mode is:
 \begin{equation}
@@ -107,7 +108,8 @@ Its useful to also look at the spectral distribution of the energy. To get that
 we can rewrite the integrand above as:
 \begin{align}
 \frac{U}{V} &= \int_{0}^{\infty} u_{\omega} d\omega \\
-	        &= \frac{\hbar}{\pi^2 c^3} \frac{\omega^3}{e^{\hbar \omega/\tau} - 1}
+u_{\omega}  &= \frac{\hbar}{\pi^2 c^3} \frac{\omega^3}{e^{\hbar \omega/\tau} - 1}
+\label{eq:PlanckSpectralDensity}
 \end{align}
 where we've moved the volume ($V = L^3$) over to the left hand side and used
 our expression from above to replace $n$ with $\omega$. This
