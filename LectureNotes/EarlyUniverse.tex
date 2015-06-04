@@ -1,4 +1,4 @@
-\section{The Early Universe: May 26}
+\section{The Early Universe: May 26 - June 2}
 Now that we have covered several of the techniques for deriving thermodynamic observables from the fundamentals of statistical mechanics, we can apply these tools to describe some of the features of the early universe (post Big Bang).
 
 
@@ -63,13 +63,14 @@ H(t) &= \frac{\dot{a}}{a} = \frac{32 \pi G \sigma_B \tau^4}{3 c^3} \\
 \end{align}
 So in this early, radiation dominated era, $\tau \propto 1/\sqrt{t}$. In SI units, we can write this as (after plugging in numbers):
 \begin{equation}
-T = 10^{10}~K~\sqrt{\frac{1 s}{t}}
+T \simeq 10^{10}~K~\sqrt{\frac{1 s}{t}}
 \end{equation}
 This (correct) value is a factor of $\sim 2$ lower than what we would get from using the formula above. The difference is that we have to account for other relativistic particles (such as neutrinos) to get the right answer.
 
 At these early and hot times, the relative abundance of neutrons and protons is given by the Boltzmann factor:
 \begin{equation}
-\frac{n_n}{n_p} = exp\bigg(-\frac{\epsilon_{np}}{\tau}\bigg)
+\frac{n_n}{n_p} \approx exp\bigg(-\frac{\epsilon_{np}}{\tau}\bigg)
+\label{eq:NeutronAbundance}
 \end{equation}
 where $\epsilon_{np} = (m_n - (m_p + m_e))c^2 \sim\,0.7\,MeV$ is the 
 difference in the rest energies of the two states (neutron and proton + 
@@ -82,18 +83,45 @@ electron). This ratio will be close to unity as long as $T \gg 10^{10}\,K$.
 \label{fig:Neutrons}
 \end{figure}
 
-As the universe continued to cool eventually it reached a state where nucleons could form some of the light elements (e.g. $\prescript{1}{}H$, 
-$\prescript{4}{}He$) but when and at what rate? By $\sim\,1\,s$ after the Big Bang, the temperature had become too low to maintain the proton-neutron balance and the fraction slowly drops as shown in \cref{fig:Neutrons}.
+\subsubsection{Nucleosynthesis}
+As the universe continued to cool eventually it reached a state where nucleons could form some 
+of the light elements 
+(e.g. $\prescript{1}{}H$, $\prescript{2}{}H$, $\prescript{3}{}He$, $\prescript{4}{}He$) 
+but when and at what rate? 
+By $\sim\,1\,s$ after the Big Bang, the temperature had become too low to maintain the 
+proton-neutron balance and the fraction slowly drops as shown in~\cref{fig:Neutrons}.
 
-In order for stable elements like helium and lithium to form, the free
-protons and neutrons must first form deuterons (1 proton + 1 neutron) which could then form $\prescript{4}{}He$ through the 
-$d + d \rightarrow \prescript{4}{}He + \gamma$ reaction (which has a few intermediate steps involving the production of $\prescript{3}{}H and \prescript{3}{}He$). 
+In order for stable elements like helium and lithium to form, the free protons and neutrons 
+must first form deuterons (1 proton + 1 neutron) which could then form $\prescript{4}{}He$ 
+through the $d + d \rightarrow \prescript{4}{}He + \gamma$ reaction (which has a few 
+intermediate steps involving the production of $\prescript{3}{}H and \prescript{3}{}He$). 
 
 However, the binding energy of the deuteron is $\epsilon_{d} = (m_d - (m_p + m_n))c^2 \sim\,2.2\,MeV$
-and so this process is suppressed as long as there are enough 2.2\,MeV photons around to disrupt the deuterons.
+and so this process is suppressed as long as there are enough 2.2\,MeV photons around to 
+disrupt the deuterons.
 \begin{align}
-p + e^- \longrightarrow \prescript{1}{}H + \gamma
+\prescript{2}{}H + \gamma \longrightarrow p + n
 \end{align}
+
+How to calculate the relative abundanced quantitatively? Well, we know that for a system in thermal and chemical equilibrium, the equilibrium condition (cf.~\cref{eq:ChemEquil}) is that:
+\begin{equation}
+\mu_p + \mu_n = \mu_d + \mu_{\gamma}
+\end{equation}
+where $\mu_p, \mu_n, \mu_d, \mu_{\gamma}$ are the chemical potentials of the protons, neutrons, deuterons, and photons, respectively. We know that $\mu_{\gamma} = 0$ for blackbody radiation and so it just remains for us to write down expressions for each of the other three terms and solve for the deuteron number density. Since the number density is still below, $n_Q$, the quantum concentration value (cf.~\cref{eq:QuantConc})
+\begin{equation}
+\mu_i = m_i c^2 + \tau \log{\frac{n_i \lambda_i^3}{g_i}}
+\end{equation}
+where $n_i$ is the number density, $\lambda_i^3 = 1/n_Q$ is the thermal de Broglie wavelength, and $g_i$ is the degeneracy (protons and neutrons have two spin states, and deuterons have three spin states: -1, 0, +1). The first term in the equation, $m_i c^2$, is the rest energy of the particle. We are including this relativistic energy in the chemical potential to account for the fact that the deuteron has a non-zero binding energy. Using this formula in our detailed chemical balance equation, we find:
+\begin{align}
+\log{\frac{n_p \lambda_p^3}{2}} + \log{\frac{n_n \lambda_n^3}{2}} - \log{\frac{n_d \lambda_d^3}{3}} = -\epsilon_B/\tau \\
+\bigg(\frac{n_p \lambda_p^3}{2}\bigg)\bigg(\frac{n_n \lambda_n^3}{2}\bigg)\bigg(\frac{n_d \lambda_d^3}{3}\bigg)^{-1} = e^{-\epsilon_B/\tau} \\
+\frac{n_d}{n_n} = \frac{3}{4} n_p \bigg(\frac{\lambda_p \lambda_n}{\lambda_d}\bigg)^3 e^{\epsilon_B/\tau}
+\end{align}
+which can be further simplified by noting that $m_p \simeq m_n \simeq m_d/2$. Since this occurs after the neutron-proton ratio 'freeeze out', this equation predicts that virtually all of the neutrons will be used up producing deuterons (which
+in turn will end up forming helium).\\
+
+If instead of three species, we had been considering the two species case (balance between protons and neutrons), most of the prefactors would cancel and we would recover the simple expression of \cref{eq:NeutronAbundance}.
+
 
 \begin{figure}[h]
 \centering
