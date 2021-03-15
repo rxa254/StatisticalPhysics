@@ -1,0 +1,99 @@
+\section{Chemical Potential: April 28}
+We have so far studied systems in which the volume and temperature are allowed to vary. In the microcanonical ensemble of chapters 1 \& 2, we used the Fundamental Postulate of Statistical Mechanics:\\
+\\
+\doublebox{An isolated system in equilibrium is equally likely to be found in any of its available microstates.}\\
+\\
+to find the most probable state. In the canonical ensemble we were introduced to the concepts of the Helmholtz Free Energy, the Boltzmann Factor, and the Partition Function. This was useful in describing the behavior of a system in thermal equilibrium with another system (often a very large Reservoir or Heat Bath).\\
+
+We could also imagine allowing the volume or the number of particles to change. We have already seen an example of this in the blackbody radiation case -- there the number of particles was \textit{not conserved}.\\
+
+Here we would like to consider the case where the particle number \emph{is} conserved, but where we allow the particles (as well as the thermal energy)to flow between the two systems, $\mathcal{S}_1$ and $\mathcal{S}_2$. 
+This is called \textit{diffusive contact}. 
+We will use the tools developed for the canonical ensemble here again.
+Some examples where this will be a useful picture:
+\begin{itemize}
+\item Permeable membrane between two boxes of gas.
+\item Adsorption / contamination of a gas onto a surface, such as might occur in thin film deposition or contamination of a silicon wafer in a clean room environment.
+\item Flow of particles in a gravitational field: barometric pressure or relative gas concentration in the Earth's atmosphere.
+\item ...
+\end{itemize}
+
+
+Just as before, when we only had thermal contact, the 
+free energy ($F = -\tau \log{Z}$) will be minimized when the two
+systems come to equilibrium; i.e. when the two non-equilibrium
+systems are allowed to diffuse into each other, they will change
+particle concentrations in the way that \textit{minimizes the total
+free energy}: $F = F_1 + F_2$. To find the minimum, we set the differential equal to zero:
+\begin{align}
+dF &= \bigg(\frac{\partial F_1}{\partial N_1}\bigg) dN_1
+	- \bigg(\frac{\partial F_2}{\partial N_2}\bigg) dN_1 \\
+   &= (\mu_1 - \mu_2) dN_1 = 0
+\label{eq:ChemEquil}
+\end{align}
+where we have used the total particle number conservation ($N = N_1 + N_2$)
+to set $dN_1 = -dN_2$. We can define the \textit{chemical potential}:
+\begin{equation}
+\boxed{\mu \equiv \bigg(\frac{\partial F}{\partial N}\bigg)_{\tau,V}}
+\label{eq:ChemPot}
+\end{equation}
+
+If we start off near equilibrium, and a small amount of particles, 
+$dN_1 > 0$, is moved from $\mathcal{S}_2$ to $\mathcal{S}_1$ to
+bring the system closer to equilibrium, we know that $F$ should get smaller:
+\begin{align}
+dF &= d(F_1 + F_2) < 0 \\
+   &= (\mu_1 - \mu_2) dN_1 < 0
+\end{align}
+so it must be that $\mu_1 < \mu_2$. The particle flow is from a region of
+higher to lower chemical potential. As long as we're treating the system as if the particles are non-interacting, we can also assert that the particles of one species do not effect the others and so a system with a collection of different kinds of particles will have a chemical potential for each kind:
+\begin{equation}
+\mu_i = \bigg(\frac{\partial F}{\partial N_i}\bigg)_{\tau,V,N_{i \neq j}}
+\end{equation}
+
+
+\subsection{Ideal Gas}
+From \cref{s:IdealGasI}, we have the expression for the Ideal Gas
+Partition function (cf.~\cref{eq:IdealGasZ}) and the Quantum 
+Concentration (cf.~\cref{eq:QuantConc}). Using Stirling's 
+approximation (cf.~FIXME) we can write the Free Energy
+as:
+\begin{align}
+F &= -\tau \log{\frac{Z_{1}^N}{N!}} \\
+  &= -\tau \bigg[N \log{n_Q V} - N \log{N} + N \bigg] 
+\end{align}
+and the chemical potential is then:
+\begin{align}
+\mu &= \bigg(\frac{\partial F}{\partial N}\bigg)_{\tau,V} \\
+    &= -\tau~(\log{n_Q V} - \log{N}) \\
+    &= \tau \log{\frac{n}{n_Q}}
+\end{align} 
+where $n \equiv N/V$ is the number density for the gas 
+particles (molecules). Since, for the ideal gas, $n \ll n_q$, the
+chemical potential will always be very negative. An ideal gas
+with a higher number density will have a more positive potential
+and so the particles will flow from the system of high density
+into the system with low density, just as your intuition would
+tell you.
+
+
+\subsection{Barometric Pressure in the Earth's Atmosphere}
+As an example of the utility of the chemical potential, we can examine
+a simplified model of the atmosphere. Assume that the atmosphere
+is in thermal and chemical equilibrium. To simplify the problem,
+will assume that there is no significant temperature gradient for the
+regions that we are considering (in reality, of course, higher
+altitudes are much colder and there is often wind and turbulence).
+
+In addition to the internal chemical potential, $\mu_{int}$, there is
+an external potential,$\mu_{grav} = m g h$, due to gravity. If the lower
+and upper atmosphere are in equilibrium, we must set these to be equal.
+\begin{align}
+\mu_{total} = \tau \log{n(h)/n_Q} = \tau \log{n(0)/n_Q}
+\end{align}
+Solving for $n(h)$, we find:
+\begin{align}
+n(h) &= n(0) e^{-m g h / \tau} \\
+p(h) &= p(0) e^{-m g h / \tau}
+\end{align}
+since, for an ideal gas, $p = n \tau$.

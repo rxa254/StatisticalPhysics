@@ -1,0 +1,17 @@
+LectureNotes/Figures/FermiDirac.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/NeutronAbundance.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/ParticleBoxPlot.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/Stirling.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/TemperatureCosmic.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/TwoSystemMultiplicity.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/COBE_FIRAS.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/Carnot_heat_engine_2.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/HeatEngineTable.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/Hubble1931.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/cobe53ghz.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/fugacity_ngrams.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/245px-photon_waves.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/BlackbodySpectrum_loglog_150dpi_en.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/CarnotLoops.png filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/21-centimeter-cosmology.jpg filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/fugacity04.jpg filter=lfs diff=lfs merge=lfs -text

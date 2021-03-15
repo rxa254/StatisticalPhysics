@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0.0in}
+\setlength{\textwidth}{6.7in}
+\setlength{\textheight}{8.5in}
+%
+%\input mydefs.tex
+\def\vev#1{\left\langle #1\right\rangle}
+%
+\begin{document}
+%
+\centerline{\large\bf Physics 2c \hfill Assignment I \hfill  4/2/15}
+
+\medskip
+\begin{description}
+\item[{\bf Reading:} ] Kittel and Kroemer, Intro, Chapter 1, Appendix A \\
+                       For next week: Chapter 2 and Appendix B.
+\item[{\bf Problems:} \hfill ] Due in Ph2 IN-box in Bridge Annex, 5PM  Thursday, 4/9/15.
+\end{description}
+
+
+\medskip
+
+\begin{description}
+
+\item[{\bf I.1} ]
+{\bf Bad Robot} \\
+A mis-programmed robot has a probability $0<p<1$ to step forward ($+x$)
+by an amount $\delta$ and a probability $q=1-p<p$ to step backwards ($-x$)
+by the same amount.
+\begin{itemize}
+\item[\bf a)] If $x$ is the robot's distance
+from its starting point, what is the probability to find it
+at $x=n\delta$ after $N$ steps?
+What is $\vev{x}$?
+$\vev{x^2}-\vev{x}^2$?
+\item[\bf b)] What is the limiting form of a)
+for $N\rightarrow\infty, \, |n|\ll N$?
+\end{itemize}
+
+\item[{\bf I.2} ]
+{\bf Gas in a container} \\
+Consider a box of volume $V_T$ containing $N_T$ atoms,
+each of which is equally likely to be anywhere in the box.
+Let $V\le V_T$ be a sub-volume of the box.
+\begin{itemize}
+\item[\bf a)] What is the average number of atoms in $V$?
+\item[\bf b)] What is the standard deviation in the number of atoms in $V$?
+\item[\bf c)] Sketch the probability distribution
+              for the number of atoms in $V$
+              for $V=V_T$, $V=\frac{1}{2}V_T$, and $V = 10^{-6}V_T$.
+              Assume $N_T = 10^{23}$.
+\end{itemize}
+
+
+\item[{\bf I.3} ] 
+{\bf Alpha particle decay} \\
+Kittel and Kroemer C.1.
+
+\item[{\bf I.4} ] 
+{\bf Classical Harmonic Oscillator Probability Distribution} \\
+The displacement $x$ of a classical simple harmonic oscillator as a function of time
+is given by $x = A\cos(\omega t+\phi)$
+where $\omega$ is the angular frequency, $A$ the amplitude of oscillation,
+and $\phi$ is an arbitrary initial parameter in the range $0\le \phi\le 2\pi$.\\
+Find the probability $P(x)dx$ that the displacement of the 
+oscillator, at a random instant, is fround to lie 
+between $x$ and $x + dx$.
+% The solution is in Liboff p 201.
+
+
+% \item[{\bf I.5} ] 
+% {\bf Approach to Gaussian distribution.}
+% Kittel and Kroemer C.2 (p 458).
+
+\end{description}
+
+\end{document}
+
+\item[{\bf I.3} ]
+{\bf The Poisson Distribution.}
+\begin{itemize}
+\item[\bf a)] The probability $W(n)$ that an event characterized by a probability $p$
+              occurs $n$ times in $N$ trials is given by the 
+              binomial distribution $W(n) = C^N_n p^n (1-p)^{N-n}$.
+              Consider the limit where $N\to \infty$, $p \ll 1$, with $\bar n = Np$ finite.
+              Show that in these limits, $W(n)$ is approximated by
+              the Poisson distribution $P_{\bar n}(n) = {\bar n}^n e^{-\bar n}/n!$.
+\item[\bf b)] Show that the Poisson distribution is properly normalized,
+              in the sense that $\sum_{n=0}^{\infty} P_{\bar n}(n) = 1$.
+\item[\bf c)] Calculate $\vev{n}$ and $\sigma = \sqrt{\vev{n^2}-\vev{n}^2}$.
+              Trick: consider $d P_{\bar n}(n) / d\bar n$.
+\end{itemize}
+
+\item[{\bf I.3} ]
+{\bf Choices in Love.}
+A young man, who lives at location $A$ of the city street plan
+shown in the figure, walks daily to the home of his fianc\'ee,
+who lives $m$ blocks east and $m$ blocks north of $A$, at location $B$.
+Because he is always anxious to see his fianc\'ee, his route always
+approaches $B$, ie, he never doubles back.
+In how many different ways can he go from $A$ to $B$?
+
+\unitlength=2pt
+\begin{center}
+\begin{picture}(50,50)(-12,-12)
+\thinlines
+\put( 0, 0){\line(1,0){36}}
+\put( 0, 8){\line(1,0){36}}
+\put( 0,16){\line(1,0){36}}
+\put( 0,24){\line(1,0){36}}
+\put( 0,32){\line(1,0){36}}
+\put( 0, 0){\line(0,1){32}}
+\put(12, 0){\line(0,1){32}}
+\put(24, 0){\line(0,1){32}}
+\put(36, 0){\line(0,1){32}}
+\thicklines
+\put( 0, 0){\vector(1,0){6}}
+\put( 6, 0){\line(1,0){6}}
+\put(12, 0){\vector(0,1){12}}
+\put(12,12){\line(0,1){12}}
+\put(12,24){\vector(1,0){12}}
+\put(24,24){\line(1,0){12}}
+\put(36,24){\vector(0,1){ 4}}
+\put(36,28){\line(0,1){ 4}}
+\put( -6, 0){$A$}
+\put( 40,30){$B$}
+\put(-16,16){$n=4$}
+\put( 15,-6){$m=3$}
+\end{picture}
+\end{center}
+
+

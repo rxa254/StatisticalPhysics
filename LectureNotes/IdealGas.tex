@@ -1,0 +1,109 @@
+\section{Ideal Gas I: April 16}
+\label{s:IdealGasI}
+As a first look at the Ideal Gas model, we start by assuming that we have $N$ identical point like particles in a box. These particles do not interact with each other and, by the virtue of being point-like, we can ignore the rotational and vibrational energies which real molecules have.\\
+
+We can then procede to solve for the quantum wavefunctions and energies just as we do for the standard "particle-in-a-box" problem (cf. K\&K, Ch.\,1, pp.\,9-10).
+\begin{equation}
+\hat{H} \Braket{\Psi} = E \Braket{\Psi}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{Figures/ParticleBoxPlot.pdf}
+\caption{Example wavefunction for a particle in a square 2D box 
+	with sides of length $L$}
+\end{figure}
+
+For this potential (the box), the Hamiltonian is just that for a free 
+particle:
+
+\begin{equation}
+\hat{H} = -\frac{\hbar^2}{2 m} \nabla^2
+\end{equation}
+
+This type of wave equation has solutions of the form $A \sin{x} + B \cos{x}$.
+By including the boundary conditions that $\Braket{\Psi} = 0$ when
+($x, y, z$) = $0$ or $L$, we can eliminate the cosine terms and we are left
+with:
+\begin{equation}
+\Psi(x,y,z) = \mathcal{C} \sin(n_x \frac{\pi}{L} x) \sin(n_y \frac{\pi}{L} y) \sin(n_z \frac{\pi}{L} z)
+\end{equation}
+where $\mathcal{C}$ is the normalization constant. After normalization (to set the total probability equal to 1), we can get the quantized energies by plugging into the Schr\"odinger Equation above:
+\begin{equation}
+\epsilon_n = \frac{\hbar^2}{2 m}\bigg(\frac{\pi}{L} \bigg)^2 (n_x^2 + n_y^2 + n_z^2)
+\label{eq:IdealGasEnergies}
+\end{equation}
+
+\subsection{Partition Function}
+We can now begin using our standard canonical ensemble 'toolbox' to derive relationships for the macroscopic observables of the system. The Boltzmann factor for a single particle is just $exp(-\epsilon_n/\tau)$ and the Partition function is
+\begin{equation}
+Z_1 = \sum_{n_x} \sum_{n_y} \sum_{n_z} e^{-\epsilon_n/\tau}
+\end{equation}
+Unsurprisingly, we would like to convert this summation into an integral in order to solve it, but is this really valid? It is, but only if the error between the sum and the series is small; i.e. true if $\epsilon_{n+1} - \epsilon_n \ll \tau$. 
+At room temperature, $\tau = k_B T = (1.38 \times 10^{-23} J/K)(300 K)$. 
+To convert to eV, we divide by the electron charge ($1.602 \times 10^{-19} C$), 
+so $\tau \simeq \frac{1}{40} eV$. The
+prefactor in \cref{eq:IdealGasEnergies} is $\sim 10^{-16} eV$ for a $1~mm^3$ box,
+so the approximation made by using an integral instead of an infinite series is extremely accurate even at the nano-Kelvin temperature now achievable through modern cryogenic methods.\\
+
+We can then perform the integral by noting that its separable into three integrals (one for each $n_i$) and that each integral is of the form $\int exp(-\alpha^2 x^2)$, which we have done before and can look up in Appendix A of K\&K or 
+\href{http://www.wolframalpha.com/input/?i=integrate\%20exp(-a\%5E2\%20x\%5E2)\%20from\%20x\%3D0..infinity}{Wolfram Alpha}.
+\begin{align}
+Z_1 &= L^3 \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2} \\
+    &= n_Q V
+\end{align}
+where $V = L^3$ and 
+\begin{equation}
+n_Q \equiv \bigg(\frac{2 \pi \hbar^2}{m \tau}\bigg)^{-3/2}
+\label{eq:QuantConc}
+\end{equation} 
+which we define as the \emph{Quantum Concentration}. Since 
+for most gases at
+room temperature, the single particle density ($1/V$) is much smaller than
+$n_Q$, $Z_1 \ll 1$, and the \textit{classical approximation} is valid. Otherwise, we would have to consider the quantum entanglement between the molecules.\\
+
+For distinguishable particles, the multi-particle partition function is just the product of the individual particle partition functions, just as the multi particle multiplicity is the product of the single particle multiplicities. Since the
+gas particles are identical, we weight it by the number of identical permutations:
+\begin{equation}
+Z_N = \frac{Z_1}{N!} = \frac{(n_Q V)^N}{N!}
+\label{eq:IdealGasZ}
+\end{equation}
+
+
+
+\subsection{The Ideal Gas Law}
+To understand the macroscopic properties of the N particle ideal gas, we can start with our expression for the Free Energy in terms of the Partition Function:
+\begin{align}
+F &= -\tau~\log Z_N \\
+  &= -\tau~(N \log Z_1 - \log N!) \\
+  &= -\tau~(N \log{n_Q V} - \log N!)
+\end{align}
+
+From \cref{eq:dFdX}, we have that
+\begin{align}
+p &= -\bigg(\frac{\partial F}{\partial V}\bigg)_\tau \\
+  &= N \tau / V
+\end{align}
+and changing from our 'fundamental' units to SI units, we recover the Ideal Gas Law:
+\begin{equation}
+\boxed{p V = N k_B T}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

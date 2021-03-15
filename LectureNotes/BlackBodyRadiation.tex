@@ -1,0 +1,132 @@
+\section{Planck Black Body: April 21 - 23}
+
+Let's consider now a system which is similar to the previous two (Ideal Gas and small System in a large Reservoir), but with a significant twist. Instead of a system where the constituents have a mass, we want to study what happens inside of a 
+black\,\footnote{Here, by 'black', I mean that the walls of the box are a 'perfectly' absorbing conductor. This is a little counterintuitive; you know that very good conductors (e.g. aluminum, copper, silver) are very reflective and \emph{not} perfectly absorbing. Nevertheless, this turns out to be a valid approximation for what we are looking into and, in fact, works well with boxes of almost any generic properties.} box in thermal equilibrium with a Reservoir. Instead of particles of a gas, we will be working with \textit{photons}, the massless quanta of electromagnetic radiation. In the end we would like to end up with all the now usual concepts: total energy, entropy, pressure (yes, even light has a 
+pressure~\footnote{cf. solar sails}), and the energy distribution (i.e. can 
+we predict what color something will be?). \\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{Figures/245px-photon_waves.png}
+\caption{EM waves in a black box with sides of length $L$}
+\end{figure}
+
+
+We'll start off with the assumption\,\footnote{which will be qualified later} that the energy of each photon of angular frequency $\omega$($=2 \pi \nu$) will just be proportional to the frequency:
+\begin{equation}
+\epsilon = \hbar \omega
+\end{equation}
+To an extremely good approximation, photons do not interact with each other (i.e. you cannot deflect a laser beam with another laser beam). So there can, in principle, be many photons with the same energy inside the box. We'll denote the occupancy of each mode as $s$, and so the energy per mode will be $\epsilon_s = s \hbar \omega$. The total energy will then just be an appropriately weighted sum over all the available modes.\\
+
+At a temperature $\tau$, the Boltzmann factor for a \textit{single} mode 
+is $e^{-s \hbar \omega / \tau}$. So the partition function for that mode is:
+\begin{align}
+Z &= \sum_{s=0}^{\infty} e^{-s \hbar \omega / \tau} \\
+  &= \frac{1}{1 - e^{-\hbar \omega / \tau}}
+\label{eq:PartPlanck}
+\end{align}
+where we have used the relation $\sum_{s=0}^{\infty} x^s = 1/(1-x)$, 
+valid when $x < 1$. \\
+
+\subsection{The Planck Distribution}
+At this point we can utilize all of the tools we have developed during the study of the canonical ensemble in Chapter 3. We know that the probability 
+distribution can just be computed from the Boltzmann factor and the partition 
+function (cf.\,\cref{eq:PofS}):
+\begin{equation}
+P(s) = e^{-s \hbar \omega / \tau} \bigg[ 1 - e^{-\hbar \omega / \tau} \bigg]
+\end{equation}
+and to find the average occupancy of each mode we just multiply by $s$ and sum over all states:
+\begin{align}
+\Braket{s} &= \sum_{s=0}^{\infty} s~P(s) \\
+           &= \frac{1}{Z} \sum_{s=0}^{\infty} s~e^{-s \hbar \omega / \tau}
+\end{align}
+We can perform the sum here by transforming it into a more familiar form. To do this note that:
+\begin{equation}
+\sum s~e^{-s x} = -\frac{d}{dx} \sum e^{-s x}
+\end{equation}
+and the right hand side can be summed in the same way as \cref{eq:PartPlanck}, above.
+So finally we arrive at the expression for the average occupancy:
+\begin{equation}
+\boxed{\Braket{s} = \frac{1}{e^{\hbar \omega / \tau} - 1}}
+\label{eq:PlanckOccupy}
+\end{equation}
+which is the \emph{Planck distribution} for the occupancy of a single mode in thermal equilibrium with a heat bath of temperature $\tau$. The average energy in each mode is:
+\begin{equation}
+\boxed{\Braket{\epsilon} = \Braket{s} \hbar \omega= 
+\frac{\hbar \omega}{e^{\hbar \omega / \tau} - 1}}
+\end{equation}
+Its interesting to look at the high and low temperature (or equivalently, the low and high frequency) limits of this expression. \\
+
+At high temperatures, where 
+$\tau \gg \hbar \omega$, we can expand the denominator ($e^x \simeq 1 + x$) and see
+that $\Braket{\epsilon} \to \tau$. This is the 'classical limit'; the energy is just
+proportional to the temperature and there is no evidence of quantization.\\
+
+At low temperatures, where $\tau \ll \hbar \omega$, the denominator becomes large
+and $\Braket{\epsilon} \to 0$. So a black box will tend towards zero energy in the
+electromangetic field~\footnote{neglecting the ground state energy of 
+$\frac{1}{2}\hbar \omega$ per mode} as well as zero occupancy. \\
+
+This highlights another interesting difference between
+a box of ideal gas molecules and a box of radiation: \emph{the photon number is
+not a conserved quantity}. As we will see soon, the same is true for 
+\textit{phonons}, the acoustic excitations in a solid.
+
+
+\subsection{The Stefan-Boltzmann Law}
+We would like to now move on to the main goal, which is to find the total energy,
+entropy, etc. for the blackbody, summing over all the modes.
+
+\begin{equation}
+U = 2 \sum_n \Braket{\epsilon_n} = 
+\sum_n \frac{\hbar \omega_n}{exp(\hbar \omega_n / \tau) - 1}
+\end{equation}
+where we have followed the convention from K \& K pp. 92-93 which describes
+the accounting for the modes allowed in the box (similar reasoning as we use
+for waves on a string and particle in a box). The factor of 2 comes from accounting
+for the 2 polarizations of the radiation field and $\omega_n = n \pi c/L$.\\
+
+We can replace the sum over the indices ($n_x, n_y, n_z$) with a triple integral
+to make the computation easier. This is valid as long as the box is not small
+with respect to the wavelength of the relavent radiation field ($L \gg c/\omega$).\\
+
+To make the integral easier, we'll convert it from Cartesian coordinates to
+spherical coordinates and replace the volume element $dn_x dn_y dn_z$, with
+the spherical volume element $4 \pi\,n^2 dn$.
+\begin{align}
+U &= 2 \times \frac{1}{8} \times 4 \pi 
+\int_{0}^{\infty} n^2 \frac{\hbar \omega_n}{exp(\hbar \omega_n / \tau) - 1} dn \\
+  &= \frac{L^3 \tau^4}{\pi^2 \hbar^3 c^3} \int_{0}^{\infty} \frac{x^3}{e^x - 1} dx \\
+  &= \frac{\pi^2 L^3 \tau^4}{15 \hbar^3 c^3}
+\label{eq:BBenergy}
+\end{align}
+where the factor of 2 is for both polarizations, the $1/8$ because we only want to consider one octant of the spherical volume (where the wavenumbers are positive), and the $4 \pi$ covers the angular part of the volume integral. We then have made the substitution $x = \pi \hbar c n / L \tau$ to get the dimensionless 
+integral. We can look up~\footnote{you can do it for yourself in a few steps if you want: multiply top and bottom by $e^{-x}$ and then recall our infinite sum for 
+$1/(1-x)$} the integral in a book or Mathematica to find that its $\pi^4/15$.
+The \emph{Stefan-Boltzmann constant} (the above prefactor) is defined as:
+\begin{equation}
+\sigma_B = \frac{\pi^2}{15}\frac{k_B^4}{\hbar^3 c^3}
+\end{equation}
+
+
+Its useful to also look at the spectral distribution of the energy. To get that
+we can rewrite the integrand above as:
+\begin{align}
+\frac{U}{V} &= \int_{0}^{\infty} u_{\omega} d\omega \\
+u_{\omega}  &= \frac{\hbar}{\pi^2 c^3} \frac{\omega^3}{e^{\hbar \omega/\tau} - 1}
+\label{eq:PlanckSpectralDensity}
+\end{align}
+where we've moved the volume ($V = L^3$) over to the left hand side and used
+our expression from above to replace $n$ with $\omega$. This
+\textit{spectral density}, $u_{\omega}$, is called the
+\emph{Planck Black Body Spectrum} and the theoretical and experimental work which
+gave rise to it was the first evidence for $\hbar$ and was the birth of
+Quantum Mechanics.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{Figures/BlackbodySpectrum_loglog_150dpi_en.png}
+\caption{Blackbody Radiation Intensity Spectral density. \\
+	From \url{https://commons.wikimedia.org/wiki/File:BlackbodySpectrum_loglog_150dpi_en.png}}
+\end{figure}
+

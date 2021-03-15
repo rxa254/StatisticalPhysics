@@ -1,0 +1,44 @@
+\section{Free Energy: April 16}
+Early on we dealt with isolated systems. An isolated system has a 
+fixed energy, $U$. Once we bring this system into contact with a
+thermal reservoir, this is no longer true. So what will happen?
+Well, the fundamental assumption of statistical mechanics is still 
+true, so the system still seeks to be in the most probable state. \\
+
+Let's use the tools of our newly found canonical ensemble approach.
+Since the system is at a fixed temperature, we can rewrite the
+partition function as a sum over energies instead a sum over microstates,
+by including $g$, the multiplicity:
+\begin{align}
+Z(\tau) &\equiv \sum_s e^{-\epsilon_s/\tau} \\
+        &= \sum_{\epsilon_s} g(\epsilon_s) e^{-\epsilon_s/\tau} \\
+        &= \sum_{\epsilon_s} e^{\sigma(\epsilon_s)} e^{-\epsilon_s/\tau}
+\end{align}
+Then we can define a new quantity, the \emph{free energy}, as
+$f \equiv \epsilon - \tau \sigma$. To find the most probable state, we
+can maximize the probability (\cref{eq:PofS}), expressed in terms 
+of energy (using the same swap as above):
+\begin{equation}
+P(\epsilon) = \frac{g(\epsilon) exp(-\epsilon/\tau)}{Z}
+\label{eq:Pepsilon}
+\end{equation}
+So we find that the most probable state is the one for which the free energy is minimized (i.e. $P$ is maximized when the argument of the exponential is minimized).
+
+By averaging over the ensemble of microstates, we can write 
+$F = \Braket{f(\epsilon)}$ (just as we did for the energy, $U$). Using also the result (cf. K\&K p. 71) that $F = -\tau \log Z$, we can see that the probability can be written simply as:
+\begin{equation}
+P(\epsilon) = exp((F - \epsilon)/\tau)
+\end{equation}
+
+We can also calculate a few useful \textbf{differential relations} with the free energy. Starting with the differential of F (and including the thermodynamic identity):
+\begin{align}
+dF &= dU - \tau d\sigma - \sigma d\tau \\
+   &= -\sigma d\tau - p dV
+\end{align}
+we find the following two relations for the partial derivatives of $F$:
+\begin{align}
+\bigg(\frac{\partial F}{\partial \tau}\bigg)_V = -\sigma \\
+\bigg(\frac{\partial F}{\partial V}\bigg)_\tau = -p
+\label{eq:dFdX}
+\end{align}
+

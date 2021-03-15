@@ -1,0 +1,97 @@
+\section{Heat and Work: May 21}
+\label{s:HeatWork}
+This week, the objective is to study how heat and work behave in exchange between systems so that we can understand how practical devices work.\\
+
+For a system with fixed number of particles $N$, the total internal energy can be expressed as a function of the entropy and volume:
+\begin{equation}
+dU = \tau d\sigma - p dV
+\end{equation}
+where the negative sign in the second term indicates that this is work done \textit{by} the system on the environment (it decreases the energy of the system). \emph{Decreasing} the volume of the system \emph{increases} its internal energy.
+
+For a system with fixed $N$, there are a number of different ways to perform work on a system other than the obvious mechanical way of compression/expansion (such as changing the external magnetic field).
+
+\subsection{Heat Engines}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{Figures/HeatEngineTable.png}
+\caption{Comparison of Heat Engine Properties}
+\end{figure}
+
+There are illuminating Flash animations of a few different heat engines from Don Ion at Santa Barbara:
+\url{http://science.sbcc.edu/~physics/flash/index.html}. The Carnot cycle is described in the textbook,
+the 4-stroke engine (Otto) is the basic model of today's internal combustion engine in many cars, and
+the Stirling cycle, which is very popular recenly due to its high efficiency and closed cycle operation.
+
+\subsubsection{The Carnot Cycle}
+The Carnot Cycle (named after Sadi Carnot) is an ideal version of a heat engine. A system (the engine) sits between a hot reservoir and a cold reservoir. Heat, $Q_h$, is extracted from hot reservoir at temperature $\tau_h$ and used to do some work. The system then ejects heat, $Q_l$, into a cold reservoir at temperature $\tau_l$ and then returns to its initial position. In the ideal Carnot picture, the engine is unchanged by this process and so the entropy remains constant: $\sigma_h = \sigma_l$
+
+The amount of work done by the engine can, at best, be the difference in the heat extracted and the heat which is dumped to the cold reservoir.
+
+\begin{equation}
+W = Q_h - Q_l = \frac{\tau_h - \tau_l}{\tau_h} Q_h
+\end{equation}
+
+the \textit{Carnot efficiency} is defined as the ratio of the work done to the heat extracted from the reservoir:
+\begin{equation}
+\eta \equiv \frac{W}{Q_h} = 1 - \tau_l/\tau_h
+\end{equation}
+In principle, we could have $\tau_l \ll \tau_h$, such that $\eta \leadsto 1$, but, in practice, as Carnot realized, the limits of the material properties of common engine parts limits the upper working temperature to $\sim$600\,K, which is only a factor of 2 above room temperate (300 K) and so a more practical Carnot engine would only have an efficiency of $\eta \sim 1/2$.
+
+
+The P-V and T-S diagrams (from Thermopedia \url{http://dx.doi.org/10.1615/AtoZ.c.carnot_cycle})
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{Figures/CarnotLoops.png}
+\caption{Carnot cycle in P-V and T-S planes}
+\end{figure}
+give graphical representations of the amount of work done.
+
+\begin{enumerate}
+\item The system begins at low temperature and low entropy. The system 
+	is compressed adiabatically (isentropically) and the temperature 
+	increases to $\tau_h$.
+
+\item At constant temperature $\tau_h$, heat $Q_h$ is injected into the 
+	system (increasing its entropy) and the system expands along the 
+	2 to 3 isotherm of the figure above.
+
+\item The system is allowed to expand isentropically, going from $\tau_h$ to $\tau_l$
+
+\item Heat, $Q_l$, is extracted from the system as it moves back 
+	into its initial position.
+\end{enumerate}
+
+
+
+\subsection{Refrigeration}
+Refrigeration is very nearly the opposite of the heat engine, when viewed in this diagramatic way. The equivalent efficiency is called the \emph{coefficient of refrigerator performance}:
+\begin{equation}
+\gamma_c = \frac{\tau_l}{\tau_h - \tau_l}
+\end{equation}
+which is not to be confused with our other symbol, $\gamma$, which is the adaibatic coefficient for an ideal gas.
+
+\subsection{Path Dependence}
+Using our knowledge of the ideal gas law, we can now compute the energy exchanges made during the isothermal and isentropic portions of the Carnot cycle.
+
+
+\subsection{Otto Cycle (gasoline)}
+The Otto cycle is interesting to us because it describes the behavior of the the 4-stroke internal combustion engine powering most of Los Angeles traffic.
+
+\subsection{Stirling Engine}
+The Stirling Engine is a closed cycle heat engine with the internal working fluid being manipulated through contact with a hot and cold surfaces. It is a very high efficiency engine which does not rely on combustion. It can use any heat source (such as renewables) and can be made to work very quietly. 
+
+
+\subsection{Chemical Work}
+What about when we transform particles from one type to another?
+
+
+\subsection{Thermodynamic Impossibilities}
+One of the practical uses of a knowledge of thermodynamics is the ability to debunk scientific frauds in the form of impossible heat engines, perpetual motion machines, devices which produce 'free energy' from the 'energy of empty space', etc.
+
+\begin{itemize}
+\item The Incredible Hulk: where does he get his mass from?
+
+\item \url{http://io9.com/new-test-suggests-nasas-impossible-em-drive-will-work-1701188933}
+
+
+\end{itemize}
