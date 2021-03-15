@@ -3,7 +3,6 @@ install:
   texlive-fonts-recommended texlive-science texlive-plain-generic
 - sudo apt-get install latexmk
 script:
-- cd LectureNotes
 - make
 - make clean
 env:

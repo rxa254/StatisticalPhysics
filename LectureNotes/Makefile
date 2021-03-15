@@ -1,2 +1,11 @@
-TARGET=ph2c_2015
-include Makefile.include
+#!/usr/bin/make -f
+.PHONY: all
+all: main
+
+main: %: %.tex
+	latexmk -f -pdf $@
+
+.PHONY: clean
+clean:
+	latexmk -C
+
