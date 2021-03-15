@@ -1,4 +1,4 @@
-Lecture Notes compilation:
+Lecture Notes compilation status:
 
 .. image:: https://travis-ci.com/rxa254/StatisticalPhysics.svg?branch=master
     :target: https://travis-ci.com/rxa254/StatisticalPhysics
