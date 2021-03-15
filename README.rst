@@ -4,7 +4,13 @@ Intro to Statistical Physics and Thermodynamics
 Lecture notes, assignments, codes, etc. associated with ph2c
 ---- from (Caltech - Spring 2021) 
 
+Link to Caltech Canvas page:
 
+
+Contribution Guide:
+===================
+* After cloning the repo, go into the root dir of the repo and do ``git lfs install``
+* please do ``Clear All Outputs`` before committing Jupyter/Python notebooks
 
 
 
