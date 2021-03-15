@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/rxa254/StatisticalPhysics.svg?branch=master)](https://travis-ci.com/rxa254/StatisticalPhysics)
+
 Intro to Statistical Physics and Thermodynamics
 =================================================
 
