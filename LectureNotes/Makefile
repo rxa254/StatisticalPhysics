@@ -7,5 +7,5 @@ main: %: %.tex
 
 .PHONY: clean
 clean:
-	latexmk -C
+	latexmk -c # clear all aux files except the main.pdf output
 
