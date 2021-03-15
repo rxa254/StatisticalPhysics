@@ -1,6 +1,6 @@
 install:
 - sudo apt-get install texlive-publishers texlive-latex-recommended texlive-latex-extra
-  texlive-fonts-recommended texlive-science texlive-plain-generic
+  texlive-fonts-recommended texlive-science texlive-generic-recommended
 - sudo apt-get install latexmk
 script:
 - cd LectureNotes
