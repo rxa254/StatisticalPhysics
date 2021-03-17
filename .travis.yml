@@ -8,8 +8,11 @@ script:
 - make clean
 deploy:
   provider: pages
-  github_token: $GITHUB_TOKEN
+  github_token: "$GITHUB_TOKEN"
   skip_cleanup: true
   keep_history: true
   on:
     branch: master
+env:
+  global:
+    secure: FyNNUZhpGZu/s6IXeHkiZtY4ssKaqOLCRqKmLhzt3lrqxfDpMFgDSrCK2jdemkAkRA/q1l73NmcDt3Avop5C4N4IFhI4BMGKQSfI25kqQyn0xYJdwMichMmIg//2veQx0YF4WQXjUnAGG18LCsVbrgc3m/MH3aNdu1w66T+IikogDMpjyGShbgtViWT8omjRZYX1miz940lxZn/8dkgJVqWUg02smka6voYfrk6emcQ17Idouo8w1PXRkMbHPzdicmjZ+UxMgo+RWUSuOIetyWIkQduadUlh2zfdi55QKwhKvnIl850EYIO8HZ+Vn3VCcq+q3bghb8zBWrVrcfeF3Xy+b0lnvxraD/CxC4ikMV11D/CUmKDn/dnLaUjckaNgjpooIJLLSLucxbb7vJ3RbowI0ohPLbGEbtKiiehn74dZBashJICNmrYjJtMpgAaZzsTLmGQOMgKWSqwXKyrRsogTUjywDUZI7EGebWAt1+94vN/9KDYDJ0W6EPoG6CVMun7Ipv0EO0j7rVJeekENuZ8dBufeyVqdNekGrKEhxTqWtaA3po18Zo/CGPZxU/OkQ9xLxWqaMcWpdCh/H7gKEKvTm0pVVUeqDNmYFoBFVKO7Tni98mk9jPYKFLM93vUF5hwNZGqEwZHpxoztc9Im/QARGdfS3V+0XZK0oTdE2vQ=
