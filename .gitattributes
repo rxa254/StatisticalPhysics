@@ -15,3 +15,4 @@ LectureNotes/Figures/BlackbodySpectrum_loglog_150dpi_en.png filter=lfs diff=lfs 
 LectureNotes/Figures/CarnotLoops.png filter=lfs diff=lfs merge=lfs -text
 LectureNotes/Figures/21-centimeter-cosmology.jpg filter=lfs diff=lfs merge=lfs -text
 LectureNotes/Figures/fugacity04.jpg filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/stat-mech-overview.pdf filter=lfs diff=lfs merge=lfs -text
