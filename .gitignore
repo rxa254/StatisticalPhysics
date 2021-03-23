@@ -2,6 +2,10 @@
 # Created by https://www.gitignore.io/api/latex,python,matlab,emacs,jupyternotebooks,macos
 # Edit at https://www.gitignore.io/?templates=latex,python,matlab,emacs,jupyternotebooks,macos
 
+# coustom
+2020/
+
+
 ### Emacs ###
 # -*- mode: gitignore; -*-
 *~
