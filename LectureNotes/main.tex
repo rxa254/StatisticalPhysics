@@ -3,6 +3,7 @@
 \usepackage{notes}
 
 %\usepackage[table,svgnames]{xcolor}
+\graphicspath{{Figures/}}
 
 % Supercedes the hypersetup inside of notes.sty
 \hypersetup{
@@ -19,12 +20,11 @@ urlcolor=blue
   labelfont={sc,bf}, textfont=small}
 
 
-
 \usepackage{epigraph}
 \usepackage{braket}
 \usepackage{fancybox}
-\usepackage{mathrsfs}
-\usepackage{gensymb}
+%\usepackage{mathrsfs}
+%\usepackage{gensymb}
 % Uncomment these for a different family of fonts
 %\usepackage{cmbright}
 %\renewcommand{\sfdefault}{cmss}
@@ -48,7 +48,7 @@ urlcolor=blue
 \usepackage[scaled]{helvet} % ss
 \usepackage{courier} % tt
 \usepackage[euler-digits]{eulervm}
-
+\def\hbar{\hslash} % seems dumb, but eulervm gives hslash, but no hbar
 
 \newcommand{\thiscoursecode}{ph2c}
 \newcommand{\thiscoursename}{Statistical Physics}
