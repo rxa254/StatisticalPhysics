@@ -23,12 +23,14 @@ Contribution Guide:
 * please do ``Clear All Outputs`` before committing Jupyter/Python notebooks
 
 
+.. _A Crash Course in Stat Mech: https://scholar.harvard.edu/files/noahmiller/files/statistical_mechanics.pdf
 
 Some Statistical Mechanics Links
 ------------------------------------
 * http://en.wikipedia.org/wiki/Laws_of_thermodynamics
 * http://en.wikipedia.org/wiki/Book:Thermodynamics
 * http://en.wikipedia.org/wiki/Statistical_mechanics
+* `A Crash Course in Stat Mech`_
 
 
 Textbooks:
