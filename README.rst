@@ -24,6 +24,7 @@ Contribution Guide:
 
 
 .. _A Crash Course in Stat Mech: https://scholar.harvard.edu/files/noahmiller/files/statistical_mechanics.pdf
+.. _MIT OCW: Stat Mech I (2013): https://ocw.mit.edu/courses/physics/8-044-statistical-physics-i-spring-2013/
 
 Some Statistical Mechanics Links
 ------------------------------------
@@ -31,7 +32,7 @@ Some Statistical Mechanics Links
 * http://en.wikipedia.org/wiki/Book:Thermodynamics
 * http://en.wikipedia.org/wiki/Statistical_mechanics
 * `A Crash Course in Stat Mech`_
-
+* `MIT OCW: Stat Mech I (2013)`_
 
 Textbooks:
 ------------
