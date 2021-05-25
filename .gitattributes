@@ -16,3 +16,5 @@ LectureNotes/Figures/CarnotLoops.png filter=lfs diff=lfs merge=lfs -text
 LectureNotes/Figures/21-centimeter-cosmology.jpg filter=lfs diff=lfs merge=lfs -text
 LectureNotes/Figures/fugacity04.jpg filter=lfs diff=lfs merge=lfs -text
 LectureNotes/Figures/stat-mech-overview.pdf filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/I02-09-nucleosynthesis1.jpg filter=lfs diff=lfs merge=lfs -text
+LectureNotes/Figures/relabund.jpg filter=lfs diff=lfs merge=lfs -text
