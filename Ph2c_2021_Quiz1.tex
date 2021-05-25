@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{geometry}        
+\geometry{letterpaper}    
+\usepackage[parfill]{parskip}  
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epstopdf}
+ \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}      
+\geometry{letterpaper}  
+\usepackage{mathtools}
+ \usepackage{hyperref}
+ \usepackage{cancel}
+ \usepackage{epsfig}
+% \usepackage{color}
+ \usepackage[nosort]{cite}
+ \usepackage[T1]{fontenc}
+ \usepackage{lipsum}       % for sample text
+ \usepackage{multicol}
+ \usepackage{float}
+\usepackage{changepage}
+  \usepackage{soul}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{marginnote}
+\usepackage{background}
+
+\newtheorem{theo}{Theorem}[section]
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+\newtheorem{lemma}{Lemma}[theo]
+\newtheorem*{defi}{Definition}
+\theoremstyle{defi}
+\newtheorem*{eg}{Example}
+
+
+\newtheorem*{theo-no}{Theorem}
+  \newcommand{\be}{\begin{equation}}
+  \newcommand{\ee}{\end{equation}}
+  \newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\e}{\epsilon}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\tr}[1]{\text{Tr}\left[{#1}\right]}
+\newcommand{\norm}[1]{\left\|{#1}\right\|}
+\newcommand{\bra}[1]{\langle{#1}|}
+\newcommand{\ket}[1]{|{#1}\rangle}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\I}{\mathcal{I}}
+\renewcommand{\it}{\textit}
+\newcommand{\bt}{\textbf}
+\newcommand{\aikeq}{\textcolor{red}}
+\newcommand{\aikec}{\textcolor{NavyBlue}}
+\newcommand{\PI}{\textcolor{ForestGreen}}
+\newcommand{\comment}[1]{\marginpar{\color{red}#1}}
+\newcommand{\setle}{\subseteq}
+\newcommand{\meas}[1]{\mu\left\{{#1}\right\}}
+\newcommand{\ms}{(\Omega, \Sigma, \mu)}
+\newcommand{\alge}[1]{\mathfrak{#1}}
+ \begin{document}  
+%%%%%%%%  
+\SetBgContents{Spring 2021}
+\SetBgScale{1.2}
+\SetBgAngle{0}
+\SetBgPosition{current page.north east}
+\SetBgHshift{-2.5cm}
+\SetBgVshift{-1cm}
+
+\title{\vspace{-3cm}  \bt{Ph2c - Quiz 1}\\
+\begin{large}
+Due: April 19 at 4pm PDT
+\end{large}
+} 
+\date{\vspace{-5ex}}
+\maketitle
+
+\begin{center}
+    {\Large DO NOT PROCEED TO THE NEXT PAGE BEFORE YOU ARE READY TO TAKE THIS QUIZ.}
+\end{center}
+
+\vspace{15mm}
+
+This is a \textbf{"LIMITED" OPEN-BOOK} quiz. Only the textbook (Kittel\&Kroemer), recitation notes, homeowork solutions (including your own) and lecture notes are allowed. You may use a calculator for simple, algebraic calculations. It must be worked out on your own, without collaboration with/from others. A late quiz will not be accepted except by prior arrangement with the Head TA and Instructor.
+
+\vspace{5mm}
+The quiz contains \textbf{3 PROBLEMS}, each worth 10 points. The time limit is \textbf{2.0 HOURS}, in one continuous sitting. A 15 minute break beyond the 2 hours is permitted during this period, as long as you are not working on the exam during this time. 
+
+\vspace{5mm}
+The quiz is \textbf{DUE} Monday Apr. 21 at 4PM and should be turned in via GradeScope. 
+
+\vspace{5mm}
+Please show as much work as you can for partial credits.
+
+\pagebreak
+
+\begin{enumerate}
+    \item \textbf{Probability in Poker (10 pts)}  
+    
+    A deck of poker cards contains 52 cards in four different suits. Each suit consists of 13 cards with values ace, king, queen, jack, 10, 9, 8, ..., 3 and 2. At every deal, five cards are randomly drawn from the entire deck of 52 cards. That is, every deal is independent of each other.
+    
+        \begin{enumerate}
+            \item (2 pts) Calculate the number of possible all five-card poker hands. Ignore the order of the cards in the hand.
+            \item (2 pts) A royal flush consists of five highest-ranking cards (ace, king, queen, jack, 10) of any one of the four suits. What is the probability $p$ of being dealt a royal flush (on the first deal)?
+            \item (3 pts) What is the probability of being dealt no royal flush after a total of 5 deals? You may express your answer in terms of $p$.
+            \item (3 pts) What is the probability of being dealt royal flush at least twice, after a total of 5 deals? You may express your answer in terms of $p$.
+        \end{enumerate}
+    \vspace{15mm}
+    
+    \item \textbf{Shannon Entropy (10 pts)} 
+    
+        Suppose we receive messages of length $N$, each message consisting of a string of symbols $a$ and $b$, for example,
+        \begin{equation}
+            abbabababaabbbbbababababbaa...
+        \end{equation}
+        
+        Suppose  $a$ occurs with probability $p$ and $b$ occurs with probability $1-p$. $0\leq p \leq1$.
+        
+        \begin{enumerate}
+            \item (4pts) When $N$ is large, most messages will contain $pN$ $a$'s and $(1-p)N$ $b$'s. Show that the number of such messages are approximately 
+            \begin{equation}
+                2^{N S},
+            \end{equation}
+            where 
+            \begin{equation}
+                S = -p\log_2{p}-(1-p)\log_2{(1-p)}.
+            \end{equation}
+            $S$ is called the \textbf{Shannon entropy} per letter. It is roughly the number of bits of information per letter.
+            
+            \item (3pts) For what values of $p$ is the number of bits (the Shannon entropy $S$) per letter smallest? For what values of $p$ is it largest?
+            
+            \item (3pts) Now instead of $a$ and $b$, suppose we have an alphabet with $k$ letters $a_1,...,a_k$, and the probability to observe $a_i$ is $p_i$. Show that when $N$ is large, the number of possible messages is approximately $2^{N S}$, where
+            \begin{equation}
+                S = - \sum_{i=1}^k{p_i \log_2{p_i}}.
+            \end{equation}
+        \end{enumerate}
+        
+    \vspace{15mm}
+    
+    \item \textbf{Thermal Equilibrium of Spin Systems (10 pts)} 
+        
+        We start with two separate spin systems with particle numbers $N_{1}, N_{2}$ and initial spin excess $s_{1}^{i}, s_{2}^{i}$. The spins all have magnetic moment $\mu$ in magnetic field $B$, and the energy of a single spin is $U=\pm 2 \mu B$. The ratio of particle numbers are $N_{2} / N_{1}=2$ while the initial energies are related by $U_{2}^{i} / U_{1}^{i}=\frac{1}{2}$. For this problem, assume that the spin excess $s_1^i\ll N_1$ and $s_2^i \ll N_2$, so that the Gaussian approximation is appropriate for the multiplicity.
+
+            (a) (2 pts) What is the initial ratio of entropies for the two systems? Express your answer in terms of $s_1^i, s_2^i, N_1$ and $N_2$. Hint: In the expression of the entropy $\sigma_1^i$, what are the leading order terms in $N_1$ and $s_1^i/N_1$?
+                
+            (b) (2 pts) What is the initial ratio of temperatures for the two systems? Express your answer as a numerical value.
+                
+            \vspace{5mm}
+            The two systems are now brought into thermal contact with each other and allowed to exchange energy, but not particles. After they have reached equilibrium, answer the following questions.
+                
+            (c) (2 pts) What is the final ratio of energies for the two systems? Express your answer as a numerical value.
+                
+            (d) (1 pt) What is the final ratio of temperatures for the two systems? Express your answer as a numerical value.
+                
+            (e) (2 pts) What is the fractional change in the total entropy $\Delta \sigma / \sigma_{i}=\frac{\sigma_{f}-\sigma_{i}}{\sigma_{i}}$? Express your answer in terms of $s_1^i, s_2^i, N_1$ and $N_2$. Hint: It'd better be $\geq 0$.
+                
+            (f) (1 pt) Explicitly calculate the fractional change in entropy from part (e) for the following conditions: $N_{2}=2 \times 10^{22}, N_{1}=1 \times 10^{22}, s_{2}^{i}=1 \times 10^{20}, s_{1}^{i}=2 \times 10^{20}$.
+\end{enumerate}
+
+
+
+\end{document}
